@@ -7,7 +7,7 @@
 <title>Sign In Form</title>
 </head>
 <body>
-
+	<jsp:include page="header.html"></jsp:include>
 	<h1>Connexion</h1>
 
 	<form name="signin" action="Sign_in" method="post">
@@ -35,5 +35,7 @@
 			Pas encore membre? <a href="subscribe.jsp">Inscription</a>
 		</p>
 	</form>
+
+	<jsp:include page="footer.html"></jsp:include>
 </body>
 </html>
