@@ -36,7 +36,7 @@ public class SignInServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		String login = request.getParameter("email");
 		String pwd = request.getParameter("password");
 		if (login == null)
@@ -58,15 +58,16 @@ public class SignInServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		String login = request.getParameter("email");
 		String pwd = request.getParameter("password");
-		
+
 		HttpSession session = request.getSession(true);
 		session.setAttribute("sessionLogin", login);
 		session.setAttribute("sessionPwd", pwd);
 
 		ResultSet result = null;
+		ResultSet result2 = null;
 		Login instanceLogin = new Login();
 
 		try {
@@ -80,9 +81,19 @@ public class SignInServlet extends HttpServlet {
 			Connection con = (Connection) DriverManager.getConnection(url, user, psw);
 
 			Statement st = (Statement) con.createStatement();
-			String sql = "Select mdp FROM compte WHERE pseudo='" + session.getAttribute("sessionLogin") + "'";
+			Statement st2 = (Statement) con.createStatement();
+			String sql = "SELECT mdp FROM compte WHERE pseudo='" + session.getAttribute("sessionLogin") + "'";
 			result = st.executeQuery(sql);
 			instanceLogin.setPws("");
+
+			String sql2 = "SELECT pseudo FROM compte WHERE pseudo='" + session.getAttribute("sessionLogin") + "'";
+			result2 = st2.executeQuery(sql2);
+
+			while (result2.next()) {
+
+				instanceLogin.setOk(true);
+
+			}
 
 			while (result.next()) {
 
@@ -99,12 +110,18 @@ public class SignInServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		if ((instanceLogin.getPws()).equals(session.getAttribute("sessionPwd"))) {
-			
-			request.getRequestDispatcher("/pageEvenement.jsp").forward(request, response);
-			session.setAttribute("isConnected", true);
+		if (instanceLogin.getOk() == true) {
+			if ((instanceLogin.getPws()).equals(session.getAttribute("sessionPwd"))) {
+				System.out.println("ok");
+				request.getRequestDispatcher("/pageEvenement.jsp").forward(request, response);
+				session.setAttribute("isConnected", true);
+			} else {
+
+				request.getRequestDispatcher("/signInError.jsp").forward(request, response);
+				session.setAttribute("isConnected", false);
+			}
 		} else {
-			
+
 			request.getRequestDispatcher("/signInError.jsp").forward(request, response);
 			session.setAttribute("isConnected", false);
 		}
