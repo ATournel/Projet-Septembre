@@ -1,0 +1,35 @@
+@charset "ISO-8859-1";
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1%;
+	background-color: lightgrey;
+}
+
+.footer {
+	padding: 1%;
+	background-color: lightgrey;
+}
+
+.hul {
+	display: flex;
+	flex-direction: row;
+}
+
+.ful {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
