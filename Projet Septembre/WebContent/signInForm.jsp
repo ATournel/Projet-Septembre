@@ -13,7 +13,7 @@
 	<form name="signin" action="Sign_in" method="post">
 		<table>
 			<tr>
-				<td>Email:</td>
+				<td>Pseudo:</td>
 				<td><input type="text" name="email" value='${sessionLogin}'></td>
 			</tr>
 			<tr></tr>
