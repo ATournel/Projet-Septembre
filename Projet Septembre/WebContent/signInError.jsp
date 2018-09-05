@@ -25,12 +25,13 @@
 				<td><p></p></td>
 			</tr>
 			<tr>
-				<td><p></p></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="Sign In"></td>
 			</tr>
 		</table>
+		<p>Invalid Pseudo or Password!</p>
 		<p>
 			Pas encore membre? <a href="subscribe.jsp">Inscription</a>
 		</p>

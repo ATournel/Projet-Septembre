@@ -61,7 +61,7 @@ public class SignInServlet extends HttpServlet {
 		
 		String login = request.getParameter("email");
 		String pwd = request.getParameter("password");
-
+		
 		HttpSession session = request.getSession(true);
 		session.setAttribute("sessionLogin", login);
 		session.setAttribute("sessionPwd", pwd);
@@ -82,6 +82,7 @@ public class SignInServlet extends HttpServlet {
 			Statement st = (Statement) con.createStatement();
 			String sql = "Select mdp FROM compte WHERE pseudo='" + session.getAttribute("sessionLogin") + "'";
 			result = st.executeQuery(sql);
+			instanceLogin.setPws("");
 
 			while (result.next()) {
 
@@ -104,7 +105,7 @@ public class SignInServlet extends HttpServlet {
 			session.setAttribute("isConnected", true);
 		} else {
 			
-			request.getRequestDispatcher("/signInForm.jsp").forward(request, response);
+			request.getRequestDispatcher("/signInError.jsp").forward(request, response);
 			session.setAttribute("isConnected", false);
 		}
 
