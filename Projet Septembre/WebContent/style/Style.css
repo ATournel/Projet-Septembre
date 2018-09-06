@@ -1,16 +1,30 @@
 @charset "ISO-8859-1";
 
+/*Colors:
+Pantone 171 C = #ff5c39
+Pantone 9224U = #FAEBDA
+Font: Roboto
+*/
+
+* {
+	font-family: Roboto, serif, sans-serif;
+}
+
 .header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 1%;
-	background-color: lightgrey;
+	background-color: #FAEBDA;
+}
+
+.header a {
+	padding-top: 2vh;
 }
 
 .footer {
 	padding: 1%;
-	background-color: lightgrey;
+	background-color: #FAEBDA;
 }
 
 .hul {
@@ -24,12 +38,47 @@
 	justify-content: space-around;
 }
 
-
-
 ul {
 	list-style: none;
 }
 
 a {
 	text-decoration: none;
+	color: black;
+}
+
+.bandeau {
+	height: 55vh;
+	background-color: #ff5c39;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-icon {
+	height: 5vh;
+	width: auto;
+}
+
+.search-bar {
+	height: 4.25vh;
+	width: 15vw;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 15%;
+}
+
+.bande-ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.bande-ul li {
+	margin-right: 20%;	
+	margin-left: 10%;
+}
+
+.signForm {
+	text-align: center;
 }
