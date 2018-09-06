@@ -49,7 +49,7 @@
 				<td><h1>Vous cherchez un evenement?</h1></td>
 			</tr>
 			<tr>
-				<td><form action="searchEvent.jsp">
+				<td><form action="pageEvenement.jsp">
 						<input type="text" class="search-bar" placeholder="Evenement.."><input
 							type="submit" class="search-icon" value="Trouver">
 					</form></td>
@@ -86,7 +86,7 @@
 		%>
 
 	</div>
-	<a class="voirPlus" href="evenement.jsp">Plus d'evenements...</a>
+	<a class="voirPlus" href="pageEvenement.jsp">Plus d'evenements...</a>
 	<jsp:include page="footer.html"></jsp:include>
 </body>
 </html>

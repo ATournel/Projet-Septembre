@@ -12,13 +12,15 @@
 
 <jsp:include page="header.html"></jsp:include>
 
+<h3>Créer un Evenement: <a href="formulaireEvenement.jsp">Go!</a></h3><br /><br />
+
 <%
 
 Class.forName("com.mysql.jdbc.Driver");
 
 String url = "jdbc:mysql://localhost/mayagenda?useSSL=false";
 String user = "root";
-String pwd= "Itsalmostdone1";
+String pwd= "Ioplop88";
 
 Connection cn=DriverManager.getConnection(url, user, pwd);
 Statement st = cn.createStatement(); 

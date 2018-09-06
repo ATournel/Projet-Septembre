@@ -9,8 +9,8 @@
 <body>
 	<jsp:include page="header.html"></jsp:include>
 
-	<h1>Créer un évenement</h1>
-	<form action="formulaireEvenementSave.jsp">
+	<h1 class="signTitle">Créer un évenement</h1>
+	<form class="signForm" action="formulaireEvenementSave.jsp">
 
 
 		<table>
