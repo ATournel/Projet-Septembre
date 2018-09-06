@@ -5,7 +5,6 @@ Pantone 171 C = #ff5c39
 Pantone 9224U = #FAEBDA
 Font: Roboto
 */
-
 * {
 	font-family: Roboto, serif, sans-serif;
 }
@@ -55,6 +54,10 @@ a {
 	align-items: center;
 }
 
+.bandeau h1 {
+	font-size: 2.5rem;
+}
+
 .search-icon {
 	height: 5vh;
 	width: auto;
@@ -65,7 +68,7 @@ a {
 	width: 15vw;
 	margin-top: 2%;
 	margin-bottom: 2%;
-	margin-left: 15%;
+	margin-left: 20%;
 }
 
 .bande-ul {
@@ -75,10 +78,22 @@ a {
 }
 
 .bande-ul li {
-	margin-right: 20%;	
+	margin-right: 20%;
 	margin-left: 10%;
 }
 
 .signForm {
+	
+}
+
+.lastEvents li {
+	border: 1px solid black;
+	padding: 10px;
+	margin-right: 30%;
+	font-size: 1.5rem;
+}
+
+.lastEvents h2 {
 	text-align: center;
+	font-size: 2.5rem;
 }
