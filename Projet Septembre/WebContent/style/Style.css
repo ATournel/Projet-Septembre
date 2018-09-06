@@ -87,8 +87,8 @@ a {
 	padding-right: 20px;
 	padding-top: 30px;
 	padding-bottom: 30px;
-	margin-left: 40%;
-	margin-right: 40%;
+	margin-left: 39%;
+	margin-right: 39%;
 	margin-bottom: 10%;
 	background-color: #FAEBDA;
 }
@@ -101,6 +101,10 @@ a {
 
 .invalid {
 	color: red;
+}
+
+fieldset {
+	border: none;
 }
 
 .lastEvents li {
