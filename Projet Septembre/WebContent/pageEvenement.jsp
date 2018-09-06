@@ -79,5 +79,7 @@ while (result.next()) { // ne fonctionne qu'avec le while, solution à trouver !
 
 
 %>
+
+<jsp:include page="footer.html"></jsp:include>
 </body>
 </html>

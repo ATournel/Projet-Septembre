@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="header.html"></jsp:include>
 
-
-<h1> Evenement </h1>
+<h1> Créer un évenement </h1>
  <form action="formulaireEvenementSave.jsp">
    
     	<table>
@@ -35,5 +35,6 @@
 		
 		</table>
    </form>
+  <jsp:include page="footer.html"></jsp:include>
 </body>
 </html>
