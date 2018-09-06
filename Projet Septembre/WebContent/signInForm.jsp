@@ -8,9 +8,9 @@
 </head>
 <body>
 	<jsp:include page="header.html"></jsp:include>
-	<h1>Connexion</h1>
+	<h1 class="signTitle">Connexion</h1>
 
-	<form name="signin" action="Sign_in" method="post">
+	<form class="signForm" name="signin" action="Sign_in" method="post">
 		<table>
 			<tr>
 				<td>Pseudo:</td>

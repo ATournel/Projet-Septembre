@@ -8,9 +8,9 @@
 </head>
 <body>
 	<jsp:include page="header.html"></jsp:include>
-	<h1>Connexion</h1>
+	<h1 class="signTitle">Connexion</h1>
 
-	<form name="signin" action="Sign_in" method="post">
+	<form class="signForm" name="signin" action="Sign_in" method="post">
 		<table>
 			<tr>
 				<td>Pseudo:</td>
@@ -31,7 +31,7 @@
 				<td><input type="submit" value="Sign In"></td>
 			</tr>
 		</table>
-		<p>Invalid Pseudo or Password!</p>
+		<p class="invalid">Invalid Pseudo or Password!</p>
 		<p>
 			Pas encore membre? <a href="subscribe.jsp">Inscription</a>
 		</p>
