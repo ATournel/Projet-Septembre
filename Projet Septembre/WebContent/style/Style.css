@@ -94,9 +94,9 @@ a {
 }
 
 .signTitle {
-	 margin-top:8%;
-	 margin-bottom: 3%;
-	 text-align: center;
+	margin-top: 8%;
+	margin-bottom: 3%;
+	text-align: center;
 }
 
 .invalid {
@@ -117,4 +117,10 @@ fieldset {
 .lastEvents h2 {
 	text-align: center;
 	font-size: 2.5rem;
+}
+
+.voirPlus {
+	font-size: 2rem;
+	margin-left: 2%;
+	margin-bottom: 2%;
 }

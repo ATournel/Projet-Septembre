@@ -86,6 +86,7 @@
 		%>
 
 	</div>
+	<a class="voirPlus" href="evenement.jsp">Plus d'evenements...</a>
 	<jsp:include page="footer.html"></jsp:include>
 </body>
 </html>
