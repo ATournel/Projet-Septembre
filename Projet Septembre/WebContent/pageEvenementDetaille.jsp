@@ -1,0 +1,91 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.*"%>
+<%@page import="java.util.*"%>
+<%@page import="java.text.*"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.sql.Date.*"%>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Evenements</title>
+</head>
+<body>
+<jsp:include page="header.html"></jsp:include>
+
+	<h1>Evenements</h1>
+	<%
+		
+		Class.forName("com.mysql.jdbc.Driver");
+		System.out.println("Driver ok! :) ");
+
+		String url = "jdbc:mysql://localhost/mayagenda?useSSL=false";
+		String user = "root";
+		String pwd = "Itsalmostdone1";
+
+		Connection cn = null;
+		Statement st = null;
+
+		// recuperation de la connexion
+		cn = DriverManager.getConnection(url, user, pwd);
+		//creation d un statement 
+		st = cn.createStatement();
+		String sql = "SELECT * FROM mayagenda.evenement WHERE evenement.id_evenement ="+ session.getAttribute("id_evenement")+ "";
+		//execution requete 
+		ResultSet result = st.executeQuery(sql);
+
+		String nom;
+		String categorie;
+		String lieu;
+		String description;
+		String heureDebutEvenement;
+		String heurefinEvenement;
+		
+		// int
+		int age_mini;
+		int capacite;
+		int idEvenement;
+		
+		// recupération en String ok
+		String dateDebutEvenement;
+		String dateFinEvenement;
+		
+
+
+		while (result.next()) { // ne fonctionne qu'avec le while, solution à trouver !
+
+			nom = result.getString("nom");
+			categorie = result.getString("categorie");
+			lieu = result.getString("lieu");
+			description = result.getString("description");
+			heureDebutEvenement = result.getString("heureDebutEvenement");
+			heurefinEvenement = result.getString("heurefinEvenement");
+					
+			int id_evenement = result.getInt("id_evenement");
+				
+			dateDebutEvenement = result.getString("dateDebutEvenement");
+			dateFinEvenement = result.getString("dateFinEvenement");
+
+			out.println("<h1>");
+			out.println("<strong>" + nom + " - </strong> ");
+			out.println("(" + categorie + ") ");
+			out.println("</h1>");
+			out.println("<p>");
+			out.println("Date "+ dateDebutEvenement + " / " + dateFinEvenement);
+			out.println("<br>");
+			out.println(heureDebutEvenement + " à " + heurefinEvenement+  "    - Lieu :"+ lieu);
+			out.println("</p>");
+			out.println("<p>");
+			out.println(description);
+			out.println("</p>");
+		
+			out.print("<br>");
+		}
+	%>
+<jsp:include page="footer.html"></jsp:include>
+
+</body>
+</html>
