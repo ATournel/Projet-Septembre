@@ -14,6 +14,7 @@
 <title>Evenements</title>
 </head>
 <body>
+<jsp:include page="header.html"></jsp:include>
 
 	<h1>Evenements</h1>
 	<%
@@ -84,7 +85,7 @@
 			out.print("<br>");
 		}
 	%>
-
+<jsp:include page="footer.html"></jsp:include>
 
 </body>
 </html>

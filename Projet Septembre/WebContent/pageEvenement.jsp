@@ -70,7 +70,7 @@ while (result.next()) { // ne fonctionne qu'avec le while, solution à trouver !
 	out.println("</p>");
 	out.print("<br>");
 	
-	out.print("<form action=\"/pageEvenementDetaille.jsp\">");
+	out.print("<form action=\"pageEvenementDetaille.jsp\">");
 	out.print("<button type=\"submit\">En savoir plus</button><br>");
 	out.print("</form>");
 	  
