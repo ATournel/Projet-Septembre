@@ -43,7 +43,6 @@ ul {
 
 a {
 	text-decoration: none;
-	color: black;
 }
 
 .bandeau {
@@ -83,7 +82,25 @@ a {
 }
 
 .signForm {
-	
+	border: 1px solid black;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-left: 40%;
+	margin-right: 40%;
+	margin-bottom: 10%;
+	background-color: #FAEBDA;
+}
+
+.signTitle {
+	 margin-top:8%;
+	 margin-bottom: 3%;
+	 text-align: center;
+}
+
+.invalid {
+	color: red;
 }
 
 .lastEvents li {

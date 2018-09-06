@@ -8,7 +8,7 @@
 </head>
 <body>
 	<jsp:include page="header.html"></jsp:include>
-	<h1>Connexion</h1>
+	<h1 class="signTitle">Connexion</h1>
 
 	<form class="signForm" name="signin" action="Sign_in" method="post">
 		<table>
