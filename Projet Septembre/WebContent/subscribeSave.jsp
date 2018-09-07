@@ -16,7 +16,7 @@
 
 		String url = "jdbc:mysql://localhost/mayagenda?useSSL=false";
 		String user = "root";
-		String pwd = "Ioplop88";
+		String pwd = "Legrosnunu1)";
 
 		Connection con = DriverManager.getConnection(url, user, pwd);
 		
@@ -34,7 +34,7 @@
 
 		if (i > 0) {
 %>
-<jsp:forward page="Home.jsp"></jsp:forward>
+<jsp:forward page="subscribe.jsp"></jsp:forward>
 <%
 	} else {
 			out.print("Veuillez remplir correctement tous les champs, merci.");

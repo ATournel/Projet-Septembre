@@ -7,54 +7,44 @@
 <title>Subscribe</title>
 </head>
 <body>
-	<jsp:include page="header.html"></jsp:include>
-	<H1 class="signTitle">Formulaire d'Inscription</H1>
-	<form class="signForm" action="subscribeSave.jsp">
-
-		<table>
-			<tr>
-				<td>Nom:</td>
-				<td><input type="text" name="nom"></td>
-			</tr>
-			<tr>
+	<form action="subscribeSave.jsp">
+		<jsp:include page="header.html"></jsp:include>
+		<center>
+			<H1>FORMULAIRE D'INSCRIPTION</H1>
+			<table>
+				<tr>
+					<td>Nom:</td>
+					<td><input type="text" name="nom"></td>
+				</tr>
 				<td>Prénom:</td>
 				<td><input type="text" name="prenom"></td>
-			</tr>
-			<tr>
-				<td>Pseudo:</td>
-				<td><input type="text" name="pseudo"></td>
-			</tr>
-			<tr>
-				<td>Adresse mail:</td>
+				</tr>
+				<tr>
+					<td>Pseudo:</td>
+					<td><input type="text" name="pseudo"></td>
+				</tr>
+				<td>Mail:</td>
 				<td><input type="text" name="mail_compte"></td>
+				</tr>
+				<tr>
+					<td>Mot de passe:</td>
+					<td><input type="password" name="mdp"></td>
+				</tr>
+				<tr>
+				<td><p></p></td>
 			</tr>
 			<tr>
-				<td>Mot de passe:</td>
-				<td><input type="password" name="mdp"></td>
+				<td><p></p></td>
 			</tr>
-			<tr>
-				<td>Genre:</td>
-				<td>
-					<fieldset>
-						<input type="radio" id="Femme" name="feature" value="Femme"
-							checked /> <label for="Femme">Femme</label> <input type="radio"
-							id="Homme" name="feature" value="Homme" /> <label for="Homme">Homme</label>
-					</fieldset>
-				</td>
-			</tr>
-			<tr>
-				<td>Age:</td>
-				<td><input type="text" name="age"></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="S'inscrire"></td>
-			</tr>
+				<tr>
+					<td><input type="submit" value="Valider"></td>
+				</tr>
 
-		</table>
+			</table>
 
-		<p>
-			Déjà membre? <a href="signInForm.jsp">Connexion</a>
-		</p>
+			<p>
+				Déjà membre? <a href="signInForm.jsp">Connexion</a>
+			</p>
 	</form>
 	</center>
 	<jsp:include page="footer.html"></jsp:include>
