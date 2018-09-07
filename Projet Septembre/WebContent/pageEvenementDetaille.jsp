@@ -16,7 +16,7 @@
 <body>
 <jsp:include page="header.html"></jsp:include>
 
-	<h1>Evenements</h1>
+	<h1>Evénement</h1>
 	<%
 		
 		Class.forName("com.mysql.jdbc.Driver");

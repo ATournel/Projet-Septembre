@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Formulaire Event</title>
 </head>
 <body>
 	<jsp:include page="header.html"></jsp:include>
@@ -28,8 +28,8 @@
 			<tr><td>Heure de début :</td><td><input type="text" name="heureDebutEvenement"></td></tr>
 			<tr><td>Date de fin :</td><td><input type="text" name="dateFinEvenement"></td></tr>
 			<tr><td>Heure de fin :</td><td><input type="text" name="heurefinEvenement"></td></tr>
-			<tr><td>Description :</td><td><input type="textarea" name="description"></td></tr>
 			<tr><td>Nombre de places :</td><td><input type="text" name="capacite"></td></tr>
+			<tr><td>Description :</td><td><input type="textarea" name="description"></td></tr>
 			
 			
 
