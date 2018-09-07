@@ -8,9 +8,9 @@
 </head>
 <body>
 	<jsp:include page="header.html"></jsp:include>
-	<h1 class="signTitle">Connexion</h1>
+	<h1>Connexion</h1>
 
-	<form class="signForm" name="signin" action="Sign_in" method="post">
+	<form name="signin" action="Sign_in" method="post">
 		<table>
 			<tr>
 				<td>Pseudo:</td>
@@ -18,7 +18,7 @@
 			</tr>
 			<tr></tr>
 			<tr>
-				<td>Password:</td>
+				<td>Mot de passe:</td>
 				<td><input type="password" name="password"></td>
 			</tr>
 			<tr>
@@ -28,10 +28,10 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="Sign In"></td>
+				<td><input type="submit" value="Valider"></td>
 			</tr>
 		</table>
-		<p class="invalid">Invalid Pseudo or Password!</p>
+		<p>Pseudo ou mot de passe invalide!</p>
 		<p>
 			Pas encore membre? <a href="subscribe.jsp">Inscription</a>
 		</p>
