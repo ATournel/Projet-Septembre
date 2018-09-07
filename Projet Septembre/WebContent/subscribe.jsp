@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="subscribeSave.jsp">
-		<jsp:include page="header.html"></jsp:include>
+		<jsp:include page="header3.html"></jsp:include>
 		<center>
 			<H1>FORMULAIRE D'INSCRIPTION</H1>
 			<table>

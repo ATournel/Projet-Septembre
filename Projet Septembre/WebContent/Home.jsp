@@ -42,7 +42,7 @@
 <link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
 <body>
-	<jsp:include page="header.html"></jsp:include>
+	<jsp:include page="header2.html"></jsp:include>
 	<div class="bandeau">
 		<table>
 			<tr>
