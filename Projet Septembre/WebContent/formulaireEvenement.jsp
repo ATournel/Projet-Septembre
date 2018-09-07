@@ -26,7 +26,7 @@
 			<tr><td>Lieu :</td><td><input type="text" name="lieu"></td></tr>
 			<tr><td>Date début :</td><td><input type="date" name="dateDebutEvenement"></td></tr>
 			<tr><td>Heure de début :</td><td><input type="text" name="heureDebutEvenement"></td></tr>
-			<tr><td>Date fin :</td><td><input type="text" name="dateFinEvenement"></td></tr>
+			<tr><td>Date de fin :</td><td><input type="text" name="dateFinEvenement"></td></tr>
 			<tr><td>Heure de fin :</td><td><input type="text" name="heurefinEvenement"></td></tr>
 			<tr><td>Description :</td><td><input type="textarea" name="description"></td></tr>
 			<tr><td>Nombre de places :</td><td><input type="text" name="capacite"></td></tr>

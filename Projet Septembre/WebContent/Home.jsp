@@ -46,7 +46,7 @@
 	<div class="bandeau">
 		<table>
 			<tr>
-				<td><h1>Vous cherchez un evenement?</h1></td>
+				<td><h1>Vous cherchez un événement?</h1></td>
 			</tr>
 			<tr>
 				<td><form action="pageEvenement.jsp">
@@ -64,7 +64,7 @@
 	</div>
 
 	<div class="lastEvents">
-		<h2>Les derniers evenements:</h2>
+		<h2>Les derniers événements:</h2>
 
 		<%
 			out.println("<ul>");
@@ -86,7 +86,7 @@
 		%>
 
 	</div>
-	<a class="voirPlus" href="pageEvenement.jsp">Plus d'evenements...</a>
+	<a class="voirPlus" href="pageEvenement.jsp">Plus d'événements...</a>
 	<jsp:include page="footer.html"></jsp:include>
 </body>
 </html>
