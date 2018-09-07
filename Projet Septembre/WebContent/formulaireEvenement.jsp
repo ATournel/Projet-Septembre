@@ -21,7 +21,7 @@
 				<select name="catégorie">
             			<option></option>
             			<option>Atelier Coworking</option>
-            			<option>Hackaton</option>
+            			<option>Hackathon</option>
        	 	</select> <br/></td></tr>
 			<tr><td>Lieu :</td><td><input type="text" name="lieu"></td></tr>
 			<tr><td>Date début :</td><td><input type="date" name="dateDebutEvenement"></td></tr>
