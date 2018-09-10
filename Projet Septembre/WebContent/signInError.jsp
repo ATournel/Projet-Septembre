@@ -14,7 +14,7 @@
 		<table>
 			<tr>
 				<td>Pseudo:</td>
-				<td><input type="text" name="email" value='${sessionLogin}'></td>
+				<td><input type="text" name="pseudo" value='${sessionLogin}'></td>
 			</tr>
 			<tr></tr>
 			<tr>

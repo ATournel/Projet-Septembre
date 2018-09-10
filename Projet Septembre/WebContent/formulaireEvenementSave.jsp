@@ -21,7 +21,8 @@ if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 		String dateDebutEvenement  = request.getParameter("dateDebutEvenement");
 		String description  = request.getParameter("description");
 		String dateFinEvenement  = request.getParameter("dateFinEvenement");
-		String capacite =  request.getParameter("capacite");
+		String capacite = request.getParameter("capacite");
+		String mailCompte = (String)session.getAttribute("mailCompte");
 	
 		
 		 
@@ -34,18 +35,18 @@ if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 		
 		Connection cn=DriverManager.getConnection(url, user, pwd);
 		
-		PreparedStatement ps = cn.prepareStatement("INSERT INTO evenement (nom, categorie, lieu, heureDebutEvenement, heurefinEvenement, description, dateDebutEvenement, dateFinEvenement, capacite) values (  ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		PreparedStatement ps = cn.prepareStatement("INSERT INTO evenement (mail_createur, nom, categorie, lieu, heureDebutEvenement, heurefinEvenement, description, dateDebutEvenement, dateFinEvenement, capacite) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		
-		ps.setString(1, nom);
-		ps.setString(2, categorie);
-		ps.setString(3, lieu);
-		ps.setString(4, heureDebutEvenement);
-		ps.setString(5, heurefinEvenement);
-		ps.setString(6, description);
-		ps.setString(7, dateDebutEvenement);
-		ps.setString(8, dateFinEvenement);
-		
-		ps.setString(9, capacite);
+		ps.setString(1, mailCompte);
+		ps.setString(2, nom);
+		ps.setString(3, categorie);
+		ps.setString(4, lieu);
+		ps.setString(5, heureDebutEvenement);
+		ps.setString(6, heurefinEvenement);
+		ps.setString(7, description);
+		ps.setString(8, dateDebutEvenement);
+		ps.setString(9, dateFinEvenement);		
+		ps.setString(10, capacite);
 		//ps.setDate(10, dateFinEvenement);
 		
 	            

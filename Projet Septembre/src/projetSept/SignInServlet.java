@@ -37,7 +37,7 @@ public class SignInServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String login = request.getParameter("email");
+		String login = request.getParameter("pseudo");
 		String pwd = request.getParameter("password");
 		if (login == null)
 			login = "";
@@ -63,7 +63,7 @@ public class SignInServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String login = request.getParameter("email");
+		String login = request.getParameter("pseudo");
 		String pwd = request.getParameter("password");
 
 		HttpSession session = request.getSession(true);
@@ -78,6 +78,7 @@ public class SignInServlet extends HttpServlet {
 		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n"
 				+ "			<li><a href=\"Sign_in\">Connexion</a>";
 		session.setAttribute("connect", notLogged);
+		String mailCompte = "";
 
 		try {
 
@@ -95,13 +96,14 @@ public class SignInServlet extends HttpServlet {
 			result = st.executeQuery(sql);
 			instanceLogin.setPws("");
 
-			String sql2 = "SELECT pseudo FROM compte WHERE pseudo='" + session.getAttribute("sessionLogin")
+			String sql2 = "SELECT pseudo, mail_compte FROM compte WHERE pseudo='" + session.getAttribute("sessionLogin")
 					+ "'";
 			result2 = st2.executeQuery(sql2);
 
 			while (result2.next()) {
 
 				instanceLogin.setOk(true);
+				mailCompte = result2.getString("mail_compte");
 
 			}
 
@@ -125,6 +127,7 @@ public class SignInServlet extends HttpServlet {
 				System.out.println("ok");
 				session.setAttribute("isConnected", true);
 				session.setAttribute("connect", logged);
+				session.setAttribute("mailCompte", mailCompte);
 
 				request.getRequestDispatcher("/pageEvenement.jsp").forward(request, response);
 			} else {
