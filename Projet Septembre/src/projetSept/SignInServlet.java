@@ -47,9 +47,9 @@ public class SignInServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		session.setAttribute("sessionLogin", login);
 		session.setAttribute("sessionPwd", pwd);
-		
-		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n" + 
-				"			<li><a href=\"Sign_in\">Connexion</a>";
+
+		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n"
+				+ "			<li><a href=\"Sign_in\">Connexion</a>";
 		session.setAttribute("connect", notLogged);
 
 		request.getRequestDispatcher("/signInForm.jsp").forward(request, response);
@@ -62,7 +62,7 @@ public class SignInServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		String login = request.getParameter("email");
 		String pwd = request.getParameter("password");
 
@@ -73,10 +73,10 @@ public class SignInServlet extends HttpServlet {
 		ResultSet result = null;
 		ResultSet result2 = null;
 		Login instanceLogin = new Login();
-		
-		String logged = "<p>Welcome "+login+"<br /><a href='profil.jsp'>Voir mon profil</a></p>";
-		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n" + 
-				"			<li><a href=\"Sign_in\">Connexion</a>";
+
+		String logged = "<p>Welcome " + login + "<br /><a href='profil.jsp'>Voir mon profil</a></p>";
+		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n"
+				+ "			<li><a href=\"Sign_in\">Connexion</a>";
 		session.setAttribute("connect", notLogged);
 
 		try {
@@ -95,7 +95,8 @@ public class SignInServlet extends HttpServlet {
 			result = st.executeQuery(sql);
 			instanceLogin.setPws("");
 
-			String sql2 = "SELECT pseudo FROM compte WHERE pseudo='" + session.getAttribute("sessionLogin") + "'";
+			String sql2 = "SELECT pseudo FROM compte WHERE pseudo='" + session.getAttribute("sessionLogin")
+					+ "'";
 			result2 = st2.executeQuery(sql2);
 
 			while (result2.next()) {
@@ -124,6 +125,7 @@ public class SignInServlet extends HttpServlet {
 				System.out.println("ok");
 				session.setAttribute("isConnected", true);
 				session.setAttribute("connect", logged);
+
 				request.getRequestDispatcher("/pageEvenement.jsp").forward(request, response);
 			} else {
 

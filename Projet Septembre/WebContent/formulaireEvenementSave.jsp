@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="java.sql.*"%> <%@page import="java.util.*" %> <%@page import= "java.text.*"%> <%@page import="java.util.Date" %> <%@page import="java.sql.Date.*" %>
+<%@page import="java.sql.*"%>
+<%@page import="java.util.*"%>
+<%@page import="java.text.*"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.sql.Date.*"%>
 <%
+
+if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 
  try {
 	 
@@ -49,7 +55,7 @@
 		            
 		    if(i>0){
 		    %>
-<jsp:forward page="formulaireEvenement.jsp"></jsp:forward>
+<jsp:forward page="pageEvenement.jsp"></jsp:forward>
 <% 
 		    }
 		    else{
@@ -60,5 +66,10 @@
  catch(Exception e){e.printStackTrace();
  out.print("sorry!please fill correct detail and try again" );
  }
+}else{
+	%>
+	<jsp:forward page="/Sign_in"></jsp:forward>
+	<% 
+}
 
  %>

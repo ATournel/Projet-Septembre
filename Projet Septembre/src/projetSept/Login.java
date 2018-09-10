@@ -5,7 +5,17 @@ public class Login {
 	String pws;
 
 	Boolean ok = false;
-	
+
+	public String getLoggedMail() {
+		return loggedMail;
+	}
+
+	public void setLoggedMail(String loggedMail) {
+		this.loggedMail = loggedMail;
+	}
+
+	String loggedMail;
+
 	public Boolean getOk() {
 		return ok;
 	}
