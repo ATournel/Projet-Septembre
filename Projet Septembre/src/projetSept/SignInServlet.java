@@ -47,6 +47,10 @@ public class SignInServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		session.setAttribute("sessionLogin", login);
 		session.setAttribute("sessionPwd", pwd);
+		
+		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n" + 
+				"			<li><a href=\"Sign_in\">Connexion</a>";
+		session.setAttribute("connect", notLogged);
 
 		request.getRequestDispatcher("/signInForm.jsp").forward(request, response);
 
@@ -58,7 +62,7 @@ public class SignInServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
 		String login = request.getParameter("email");
 		String pwd = request.getParameter("password");
 
@@ -69,6 +73,11 @@ public class SignInServlet extends HttpServlet {
 		ResultSet result = null;
 		ResultSet result2 = null;
 		Login instanceLogin = new Login();
+		
+		String logged = "<p>Welcome "+login+"<br /><a href='profil.jsp'>Voir mon profil</a></p>";
+		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n" + 
+				"			<li><a href=\"Sign_in\">Connexion</a>";
+		session.setAttribute("connect", notLogged);
 
 		try {
 
@@ -113,17 +122,20 @@ public class SignInServlet extends HttpServlet {
 		if (instanceLogin.getOk() == true) {
 			if ((instanceLogin.getPws()).equals(session.getAttribute("sessionPwd"))) {
 				System.out.println("ok");
-				request.getRequestDispatcher("/pageEvenement.jsp").forward(request, response);
 				session.setAttribute("isConnected", true);
+				session.setAttribute("connect", logged);
+				request.getRequestDispatcher("/pageEvenement.jsp").forward(request, response);
 			} else {
 
 				request.getRequestDispatcher("/signInError.jsp").forward(request, response);
 				session.setAttribute("isConnected", false);
+				session.setAttribute("connect", notLogged);
 			}
 		} else {
 
 			request.getRequestDispatcher("/signInError.jsp").forward(request, response);
 			session.setAttribute("isConnected", false);
+			session.setAttribute("connect", notLogged);
 		}
 
 	}

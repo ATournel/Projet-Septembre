@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<jsp:include page="header.html"></jsp:include>
+<jsp:include page="header.jsp"></jsp:include>
 
 <h3>Créer un Evenement: <a href="formulaireEvenement.jsp">Go!</a></h3><br /><br />
 

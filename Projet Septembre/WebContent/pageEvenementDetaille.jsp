@@ -14,7 +14,7 @@
 <title>Evenements</title>
 </head>
 <body>
-<jsp:include page="header.html"></jsp:include>
+<jsp:include page="header.jsp"></jsp:include>
 
 	<h1>Evénement</h1>
 	<%

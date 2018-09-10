@@ -7,7 +7,10 @@
 </head>
 <body>
 	<div class="header">
-		<img src="images/Simplon-logo-simplon.co_.png" width=12% height=90%>
+		<a href="Home.jsp">Accueil</a>
+		<ul class="hul">
+			<li>${connect}</li>
+		</ul>
 	</div>
 </body>
 </html>
