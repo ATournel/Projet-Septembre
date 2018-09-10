@@ -14,11 +14,10 @@
 <title>Evenements</title>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
 	<h1>Evénement</h1>
 	<%
-		
 		Class.forName("com.mysql.jdbc.Driver");
 		System.out.println("Driver ok! :) ");
 
@@ -28,12 +27,13 @@
 
 		Connection cn = null;
 		Statement st = null;
-
+		int eventId = Integer.parseInt(request.getParameter("eventId"));
 		// recuperation de la connexion
 		cn = DriverManager.getConnection(url, user, pwd);
 		//creation d un statement 
 		st = cn.createStatement();
-		String sql = "SELECT * FROM mayagenda.evenement WHERE evenement.id_evenement ="+ session.getAttribute("id_evenement")+ "";
+		String sql = "SELECT * FROM mayagenda.evenement WHERE evenement.id_evenement ="
+				+ eventId + "";
 		//execution requete 
 		ResultSet result = st.executeQuery(sql);
 
@@ -43,17 +43,15 @@
 		String description;
 		String heureDebutEvenement;
 		String heurefinEvenement;
-		
+
 		// int
 		int age_mini;
 		int capacite;
 		int idEvenement;
-		
+
 		// recupération en String ok
 		String dateDebutEvenement;
 		String dateFinEvenement;
-		
-
 
 		while (result.next()) { // ne fonctionne qu'avec le while, solution à trouver !
 
@@ -63,9 +61,9 @@
 			description = result.getString("description");
 			heureDebutEvenement = result.getString("heureDebutEvenement");
 			heurefinEvenement = result.getString("heurefinEvenement");
-					
+
 			int id_evenement = result.getInt("id_evenement");
-				
+
 			dateDebutEvenement = result.getString("dateDebutEvenement");
 			dateFinEvenement = result.getString("dateFinEvenement");
 
@@ -74,18 +72,18 @@
 			out.println("(" + categorie + ") ");
 			out.println("</h1>");
 			out.println("<p>");
-			out.println("Date "+ dateDebutEvenement + " / " + dateFinEvenement);
+			out.println("Date " + dateDebutEvenement + " / " + dateFinEvenement);
 			out.println("<br>");
-			out.println(heureDebutEvenement + " à " + heurefinEvenement+  "    - Lieu :"+ lieu);
+			out.println(heureDebutEvenement + " à " + heurefinEvenement + "    - Lieu :" + lieu);
 			out.println("</p>");
 			out.println("<p>");
 			out.println(description);
 			out.println("</p>");
-		
+
 			out.print("<br>");
 		}
 	%>
-<jsp:include page="footer.html"></jsp:include>
+	<jsp:include page="footer.html"></jsp:include>
 
 </body>
 </html>
