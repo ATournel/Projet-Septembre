@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@page import="java.sql.*"%> <%@page import="java.util.*" %> <%@page import= "java.text.*"%> <%@page import="java.util.Date" %> <%@page import="java.sql.Date.*" %>
+<%@page import="java.sql.*"%>
+<%@page import="java.util.*"%>
+<%@page import="java.text.*"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.sql.Date.*"%>
 <%
+
+if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 
  try {
 	 
@@ -15,7 +21,8 @@
 		String dateDebutEvenement  = request.getParameter("dateDebutEvenement");
 		String description  = request.getParameter("description");
 		String dateFinEvenement  = request.getParameter("dateFinEvenement");
-		String capacite =  request.getParameter("capacite");
+		String capacite = request.getParameter("capacite");
+		String mailCompte = (String)session.getAttribute("mailCompte");
 	
 		
 		 
@@ -28,18 +35,18 @@
 		
 		Connection cn=DriverManager.getConnection(url, user, pwd);
 		
-		PreparedStatement ps = cn.prepareStatement("INSERT INTO evenement (nom, categorie, lieu, heureDebutEvenement, heurefinEvenement, description, dateDebutEvenement, dateFinEvenement, capacite) values (  ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		PreparedStatement ps = cn.prepareStatement("INSERT INTO evenement (mail_createur, nom, categorie, lieu, heureDebutEvenement, heurefinEvenement, description, dateDebutEvenement, dateFinEvenement, capacite) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		
-		ps.setString(1, nom);
-		ps.setString(2, categorie);
-		ps.setString(3, lieu);
-		ps.setString(4, heureDebutEvenement);
-		ps.setString(5, heurefinEvenement);
-		ps.setString(6, description);
-		ps.setString(7, dateDebutEvenement);
-		ps.setString(8, dateFinEvenement);
-		
-		ps.setString(9, capacite);
+		ps.setString(1, mailCompte);
+		ps.setString(2, nom);
+		ps.setString(3, categorie);
+		ps.setString(4, lieu);
+		ps.setString(5, heureDebutEvenement);
+		ps.setString(6, heurefinEvenement);
+		ps.setString(7, description);
+		ps.setString(8, dateDebutEvenement);
+		ps.setString(9, dateFinEvenement);		
+		ps.setString(10, capacite);
 		//ps.setDate(10, dateFinEvenement);
 		
 	            
@@ -49,7 +56,7 @@
 		            
 		    if(i>0){
 		    %>
-<jsp:forward page="formulaireEvenement.jsp"></jsp:forward>
+<jsp:forward page="pageEvenement.jsp"></jsp:forward>
 <% 
 		    }
 		    else{
@@ -60,5 +67,10 @@
  catch(Exception e){e.printStackTrace();
  out.print("sorry!please fill correct detail and try again" );
  }
+}else{
+	%>
+	<jsp:forward page="/Sign_in"></jsp:forward>
+	<% 
+}
 
  %>
