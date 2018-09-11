@@ -75,10 +75,37 @@
 			out.println("</p>");
 			out.print("<br>");
 
-			out.print("<form action=\"pageEvenementDetaille.jsp\">");
-			out.print("<input type='hidden' name='eventId' value="+id_evenement+">");
-			out.print("<button type=\"submit\">En savoir plus</button><br>");
-			out.print("</form>");
+			Statement st2 = cn.createStatement();
+			String login = (String) session.getAttribute("mailCompte");
+			System.out.println(login);
+			String sql2 = "SELECT * FROM mayagenda.participant WHERE id_evenement=" + id_evenement
+					+ " AND mail_participant='" + login + "'";
+			ResultSet result2 = st2.executeQuery(sql2);
+			String presence = "";
+			
+			while (result2.next()) {
+				
+				presence = result2.getString("presence");
+
+				if (presence.equals("participe")) {
+					out.print("<form action=\"eventDetailOk.jsp\">");
+					out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
+					out.print("<button type=\"submit\">En savoir plus</button><br>");
+					out.print("</form>");
+				} else {
+					out.print("<form action=\"eventDetailPeutEtre.jsp\">");
+					out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
+					out.print("<button type=\"submit\">En savoir plus</button><br>");
+					out.print("</form>");
+				} 
+
+			}
+			if (presence.equals("")) {
+				out.print("<form action=\"pageEvenementDetaille.jsp\">");
+				out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
+				out.print("<button type=\"submit\">En savoir plus</button><br>");
+				out.print("</form>");
+			}
 
 		}
 	%>
