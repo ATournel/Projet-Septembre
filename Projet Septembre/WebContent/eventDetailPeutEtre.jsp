@@ -84,17 +84,13 @@
 			
 			String sessionMail = (String)session.getAttribute("mailCompte");
 			
-			out.print("<form name='btnParti' action='ParticiperServlet' method='post'>");
+			out.print("<form name='btnParti' action='ChangerParticiperServlet' method='post'>");
 			out.print("<input type='hidden' name='eventId' value='"+id_evenement+"'>");
 			out.print("<input type='hidden' name='partiId' value='"+sessionMail+"'>");
 			out.print("<input type='submit' value='Participer'>");
 			out.print("</form>");
 			
-			out.print("<form name='btnParti' action='PartiPeutEtreServlet' method='post'>");
-			out.print("<input type='hidden' name='eventId' value='"+id_evenement+"'>");
-			out.print("<input type='hidden' name='partiId' value='"+sessionMail+"'>");
-			out.print("<input type='submit' value='Peut-être'>");
-			out.print("</form>");
+			out.print("<p>Participe peut-être</p>");
 		}
 	%>
 	
