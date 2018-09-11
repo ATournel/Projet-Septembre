@@ -32,8 +32,7 @@
 		cn = DriverManager.getConnection(url, user, pwd);
 		//creation d un statement 
 		st = cn.createStatement();
-		String sql = "SELECT * FROM mayagenda.evenement WHERE evenement.id_evenement ="
-				+ eventId + "";
+		String sql = "SELECT * FROM mayagenda.evenement WHERE evenement.id_evenement =" + eventId + "";
 		//execution requete 
 		ResultSet result = st.executeQuery(sql);
 
@@ -81,23 +80,31 @@
 			out.println("</p>");
 
 			out.print("<br>");
+
+			String sessionMail = (String) session.getAttribute("mailCompte");
+
+			if (sessionMail != null) {
+
+				out.print("<form name='btnParti' action='ParticiperServlet' method='post'>");
+				out.print("<input type='hidden' name='eventId' value='" + id_evenement + "'>");
+				out.print("<input type='hidden' name='partiId' value='" + sessionMail + "'>");
+				out.print("<input type='submit' value='Participer'>");
+				out.print("</form>");
+
+				out.print("<form name='btnParti' action='PartiPeutEtreServlet' method='post'>");
+				out.print("<input type='hidden' name='eventId' value='" + id_evenement + "'>");
+				out.print("<input type='hidden' name='partiId' value='" + sessionMail + "'>");
+				out.print("<input type='submit' value='Peut-être'>");
+				out.print("</form>");
+			}
 			
-			String sessionMail = (String)session.getAttribute("mailCompte");
-			
-			out.print("<form name='btnParti' action='ParticiperServlet' method='post'>");
-			out.print("<input type='hidden' name='eventId' value='"+id_evenement+"'>");
-			out.print("<input type='hidden' name='partiId' value='"+sessionMail+"'>");
-			out.print("<input type='submit' value='Participer'>");
-			out.print("</form>");
-			
-			out.print("<form name='btnParti' action='PartiPeutEtreServlet' method='post'>");
-			out.print("<input type='hidden' name='eventId' value='"+id_evenement+"'>");
-			out.print("<input type='hidden' name='partiId' value='"+sessionMail+"'>");
-			out.print("<input type='submit' value='Peut-être'>");
-			out.print("</form>");
+			else {
+				out.print("<p>Connectez-vous pour vous inscrire</p>");
+			}
+
 		}
 	%>
-	
+
 
 </body>
 </html>
