@@ -11,7 +11,7 @@
 
 		Class.forName("com.mysql.jdbc.Driver");
 
-		String url = "jdbc:mysql://localhost:3306/mayagenda";
+		String url = "jdbc:mysql://localhost:3306/mayagenda?useUnicode=true&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false";
 		String user = "root";
 		String pwd = "Ioplop88)";
 
@@ -38,6 +38,6 @@
 
 	} catch (Exception e) {
 		e.printStackTrace();
-		out.print("Veuillez remplir correctement tous les champs, merci.");
+		out.print("Mauvaise Connection.");
 	}
 %>

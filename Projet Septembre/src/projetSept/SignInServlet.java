@@ -74,7 +74,7 @@ public class SignInServlet extends HttpServlet {
 		ResultSet result2 = null;
 		Login instanceLogin = new Login();
 
-		String logged = "<p>Welcome " + login + "<br /><a href='profil.jsp'>Voir mon profil</a></p>";
+		String logged = "<p>Welcome " + login + "<br /><a href='profilPerso.jsp'>Voir mon profil</a></p>";
 		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n"
 				+ "			<li><a href=\"Sign_in\">Connexion</a>";
 		session.setAttribute("connect", notLogged);

@@ -8,7 +8,7 @@
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 
-		String url = "jdbc:mysql://localhost:3306/mayagenda";
+		String url = "jdbc:mysql://localhost:3306/mayagenda?useSSL=false";
 		String user = "root";
 		String pwd = "Ioplop88";
 
