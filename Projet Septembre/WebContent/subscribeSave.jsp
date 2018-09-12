@@ -38,6 +38,6 @@
 
 	} catch (Exception e) {
 		e.printStackTrace();
+
 		out.print("Mauvaise Connection.");
 	}
-%>
