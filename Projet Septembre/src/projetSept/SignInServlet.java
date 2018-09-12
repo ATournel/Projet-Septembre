@@ -86,7 +86,7 @@ public class SignInServlet extends HttpServlet {
 
 			String url = "jdbc:mysql://localhost:3306/mayagenda?useSSL=false";
 			String user = "root";
-			String psw = "Ioplop88";
+			String psw = "ioplop88";
 
 			Connection con = (Connection) DriverManager.getConnection(url, user, psw);
 
