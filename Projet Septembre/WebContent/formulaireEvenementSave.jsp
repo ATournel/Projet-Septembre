@@ -1,6 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-<<<<<<< Updated upstream
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.util.*"%>
 <%@page import="java.text.*"%>
@@ -83,12 +81,7 @@ if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 }else{
 	%>
 	<jsp:forward page="/Sign_in"></jsp:forward>
-	<% 
-}
-=======
-    pageEncoding="ISO-8859-1"%>
-<%@page import="java.sql.*"%> <%@page import="java.util.*" %> <%@page import= "java.text.*"%> <%@page import="java.util.Date" %> <%@page import="java.sql.Date.*" %>
-<%
+	<% }
 
  try {
          
@@ -162,6 +155,6 @@ if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
  catch(Exception e){e.printStackTrace();
  out.print("Veuillez remplir correctement tous les champs, merci.");
  }
->>>>>>> Stashed changes
+
 
  %>

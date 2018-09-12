@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@page import="java.sql.*"%>
@@ -41,11 +40,6 @@
 		e.printStackTrace();
 		out.print("Veuillez remplir correctement tous les champs, merci.");
 	}
-=======
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@page import="java.sql.*"%>
-<%
 	try {
 		String nom = request.getParameter("nom");
 		String prenom = request.getParameter("prenom");
@@ -88,5 +82,4 @@
 		e.printStackTrace();
 		out.print("Veuillez remplir correctement tous les champs, merci.");
 	}
->>>>>>> Stashed changes
 %>

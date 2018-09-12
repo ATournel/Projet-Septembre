@@ -39,7 +39,7 @@ a {
 </head>
 <body>
 	<form action="profileSave.jsp">
-		<jsp:include page="header.html"></jsp:include>
+		<jsp:include page="header.jsp"></jsp:include>
 		<h2 style="text-align: center">Profil participant</h2>
 
 		<div class="card">

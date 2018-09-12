@@ -60,7 +60,7 @@ body {
 <body
 	background="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX25554818.jpg">
 	<form action="profilePerso.jsp">
-		<jsp:include page="header.html"></jsp:include>
+		<jsp:include page="header.jsp"></jsp:include>
 		<h2 style="text-align: center">
 			<font color="white">Profil personnel</font>
 		</h2>
