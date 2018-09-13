@@ -23,7 +23,7 @@
 
 		String url = "jdbc:mysql://localhost/mayagenda?useSSL=false";
 		String user = "root";
-		String pwd = "Ioplop88";
+		String pwd = "Ioplop88";//Ioplop88
 
 		Connection cn = null;
 		Statement st = null;
@@ -81,6 +81,12 @@
 			out.println("</p>");
 
 			out.print("<br>");
+			out.print("<form action=\"participants.jsp\">");
+			out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
+			out.print("<button type=\"submit\">Voir les participants</button><br>");
+			out.print("</form>");
+			out.print("<br>");
+			
 			
 			String sessionMail = (String)session.getAttribute("mailCompte");
 			
