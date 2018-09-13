@@ -19,7 +19,6 @@
 	<h1>Evénement</h1>
 	<%
 		Class.forName("com.mysql.jdbc.Driver");
-		System.out.println("Driver ok! :) ");
 
 		String url = "jdbc:mysql://localhost/mayagenda?useSSL=false";
 		String user = "root";
@@ -115,7 +114,7 @@
 				out.print("<input type='submit' value='Peut-être'>");
 				out.print("</form>");
 			}
-			
+
 			else {
 				out.print("<form action=\"participants.jsp\">");
 				out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");

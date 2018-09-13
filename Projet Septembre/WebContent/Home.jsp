@@ -8,7 +8,7 @@
 	try {
 		Class.forName("com.mysql.jdbc.Driver");
 
-		String url = "jdbc:mysql://localhost:3306/mayagenda";
+		String url = "jdbc:mysql://localhost:3306/mayagenda?useSSL=false";
 		String user = "root";
 		String pwd = "Ioplop88";
 
@@ -49,9 +49,13 @@
 				<td><h1>Vous cherchez un événement?</h1></td>
 			</tr>
 			<tr>
-				<td><form action="pageEvenement.jsp">
-						<input type="text" class="search-bar" placeholder="Evenement.."><input
-							type="submit" class="search-icon" value="Trouver">
+				<td><form action="pageEvenementSearch.jsp">
+						<input type="text" class="search-bar" name="eventName" placeholder="Evenement..">
+						<select name="categorie">
+							<option></option>
+							<option>Atelier Coworking</option>
+							<option>Hackathon</option>
+						</select> <input type="submit" class="search-icon" value="Trouver">
 					</form></td>
 			</tr>
 			<tr>
