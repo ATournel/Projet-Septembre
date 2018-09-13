@@ -13,7 +13,7 @@
 
 		String url = "jdbc:mysql://localhost:3306/mayagenda";
 		String user = "root";
-		String pwd = "Ioplop88";//Ioplop88
+		String pwd = "Ioplop88)";
 
 		Connection con = DriverManager.getConnection(url, user, pwd);
 
