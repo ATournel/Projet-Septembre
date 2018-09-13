@@ -27,8 +27,7 @@
 
 		String url = "jdbc:mysql://localhost/mayagenda?useSSL=false";
 		String user = "root";
-		String pwd = "Ioplop88";
-
+		String pwd ="Ioplop88";//Ioplop88
 		Connection cn = DriverManager.getConnection(url, user, pwd);
 		Statement st = cn.createStatement();
 
@@ -52,7 +51,7 @@
 		// recupération en String ok
 		String dateDebutEvenement;
 		String dateFinEvenement;
-
+ 
 		while (result.next()) { // ne fonctionne qu'avec le while, solution à trouver !
 
 			int id_evenement = result.getInt("id_evenement");
@@ -68,18 +67,18 @@
 			dateDebutEvenement = result.getString("dateDebutEvenement");
 			dateFinEvenement = result.getString("dateFinEvenement");
 
-			out.println(dateDebutEvenement);
+			
 			out.print("<br>");
 			out.println("<p>");
 			out.println("<strong>" + nom + " - </strong> " + categorie);
 			out.println("</p>");
+			out.println(dateDebutEvenement);
 			out.print("<br>");
 
 			Statement st2 = cn.createStatement();
 			String login = (String) session.getAttribute("mailCompte");
 			System.out.println(login);
-			String sql2 = "SELECT * FROM mayagenda.participant WHERE id_evenement=" + id_evenement
-					+ " AND mail_participant='" + login + "'";
+			String sql2 = "SELECT * FROM mayagenda.participant WHERE id_evenement=" + id_evenement + " AND mail_participant='" + login + "'";
 			ResultSet result2 = st2.executeQuery(sql2);
 			String presence = "";
 			
@@ -105,6 +104,8 @@
 				out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
 				out.print("<button type=\"submit\">En savoir plus</button><br>");
 				out.print("</form>");
+				out.print("<br>");
+				
 			}
 
 		}

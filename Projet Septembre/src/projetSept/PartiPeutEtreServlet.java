@@ -47,7 +47,7 @@ public class PartiPeutEtreServlet extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/mayagenda?useSSL=false";
 			String user = "root";
-			String psw = "Ioplop88";
+			String psw = "Ioplop88";//Ioplop88
 
 			Connection cn = (Connection) DriverManager.getConnection(url, user, psw);
 

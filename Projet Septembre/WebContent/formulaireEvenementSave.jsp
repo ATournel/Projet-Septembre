@@ -20,16 +20,16 @@ if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 		
 		
 		String dateDebutEvenement  = request.getParameter("dateDebutEvenement");
-		Date castJavaDateEvenementDebut = new SimpleDateFormat("yyyy-MM-dd").parse(dateDebutEvenement);
+		//Date castJavaDateEvenementDebut = new SimpleDateFormat("yyyy-MM-dd").parse(dateDebutEvenement);
 		// cast  java date to sql date
-		java.sql.Date castSqlDateEvenementDebut = new java.sql.Date(castJavaDateEvenementDebut.getTime());
+		//java.sql.Date castSqlDateEvenementDebut = new java.sql.Date(castJavaDateEvenementDebut.getTime());
 		
 		String description  = request.getParameter("description");
 		
 		String dateFinEvenement  = request.getParameter("dateFinEvenement");
-		Date castJavaDateEvenementfin = new SimpleDateFormat("yyyy-MM-dd").parse(dateFinEvenement);
+		//Date castJavaDateEvenementfin = new SimpleDateFormat("yyyy-MM-dd").parse(dateFinEvenement);
 		// cast  java date to sql date
-		java.sql.Date castSqlDateEvenementfin = new java.sql.Date(castJavaDateEvenementfin.getTime());
+		//java.sql.Date castSqlDateEvenementfin = new java.sql.Date(castJavaDateEvenementfin.getTime());
 		
 		
 		String capacite = request.getParameter("capacite");
@@ -42,7 +42,7 @@ if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 		
 		String url = "jdbc:mysql://localhost/mayagenda?useSSL=false";
 		String user = "root";
-		String pwd= "Ioplop88";
+		String pwd= "Ioplop88";//Ioplop88
 		
 		Connection cn=DriverManager.getConnection(url, user, pwd);
 		
@@ -55,8 +55,8 @@ if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 		ps.setString(5, heureDebutEvenement);
 		ps.setString(6, heurefinEvenement);
 		ps.setString(7, description);
-		ps.setDate(8, castSqlDateEvenementDebut);
-		ps.setDate(9, castSqlDateEvenementfin);		
+		ps.setString(8, dateDebutEvenement);
+		ps.setString(9, dateFinEvenement);		
 		ps.setString(10, capacite);
 		//ps.setDate(10, dateFinEvenement);
 		
