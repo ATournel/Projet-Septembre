@@ -20,7 +20,7 @@
 		
 		String url = "jdbc:mysql://localhost/mayagenda?useSSL=false";
 		String user = "root";
-		String pwd= "ioplop88";
+		String pwd= "Ioplop88";
 		
 		Connection cn=DriverManager.getConnection(url, user, pwd);
 		
