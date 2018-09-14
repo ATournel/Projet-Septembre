@@ -4,6 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<link rel="stylesheet" type="text/css" href="signIn.css">
 <title>Sign In Form</title>
 </head>
 <body>
@@ -13,13 +16,13 @@
 	<form class="signForm" name="signin" action="Sign_in" method="post">
 		<table>
 			<tr>
-				<td>Pseudo:</td>
-				<td><input type="text" name="pseudo" value='${sessionLogin}'></td>
+				
+				<td><input type="text" name="pseudo" value='${sessionLogin}' placeholder="Pseudo"></td>
 			</tr>
 			<tr></tr>
 			<tr>
-				<td>Mot de passe:</td>
-				<td><input type="password" name="password"></td>
+				
+				<td><input type="password" name="password" placeholder="Mot de passe"></td>
 			</tr>
 			<tr>
 				<td><p></p></td>
@@ -37,5 +40,18 @@
 	</form>
 
 	<jsp:include page="footer.html"></jsp:include>
+
+	<!--  Jsp script (bootstrap) -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
 </body>
 </html>

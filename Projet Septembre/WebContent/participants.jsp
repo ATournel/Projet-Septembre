@@ -47,7 +47,7 @@
 		Connection cn2 = DriverManager.getConnection(url, user, pwd);
 		Statement st2 = cn2.createStatement();
 		
-		String sql2= "SELECT COUNT(*) AS presence FROM participant, compte WHERE (participant.mail_participant = compte.mail_compte) AND id_evenement =1";
+		String sql2= "SELECT COUNT(*) AS presence FROM participant, compte WHERE (participant.mail_participant = compte.mail_compte) AND id_evenement=" + eventId;;
 		
 		ResultSet result2 = st2.executeQuery(sql2);
 		String participant;

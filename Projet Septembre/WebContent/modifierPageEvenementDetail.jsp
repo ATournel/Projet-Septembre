@@ -90,52 +90,7 @@
 			out.println(description);
 			out.println("</p>");
 
-			
-			
-
-
-			String sessionMail = (String) session.getAttribute("mailCompte");
-
-			if (sessionMail != null) {
-				out.print("<form action=\"participants.jsp\">");
-				out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
-				out.print("<button type=\"submit\">Voir les participants</button><br>");
-				out.print("</form>");
-
-				out.print("<form name='btnParti' action='ParticiperServlet' method='post'>");
-				out.print("<input type='hidden' name='eventId' value='" + id_evenement + "'>");
-				out.print("<input type='hidden' name='partiId' value='" + sessionMail + "'>");
-				out.print("<input type='submit' value='Participer'>");
-				out.print("</form>");
-
-				out.print("<form name='btnParti' action='PartiPeutEtreServlet' method='post'>");
-				out.print("<input type='hidden' name='eventId' value='" + id_evenement + "'>");
-				out.print("<input type='hidden' name='partiId' value='" + sessionMail + "'>");
-				out.print("<input type='submit' value='Peut-être'>");
-				out.print("</form>");
 			}
-
-			else {
-				out.print("<form action=\"participants.jsp\">");
-				out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
-				out.print("<button type=\"submit\">Voir les participants</button><br>");
-				out.print("</form>");
-				out.print("<p>Connectez-vous pour vous inscrire</p>");
-			}
-          out.print("<br>");
-			
-			out.print("<form action=\"supprimerEvenementDetail.jsp\">");
-			out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
-			out.print("<button type=\"submit\">Supprimer</button><br>");
-			out.print("</form>");
-			
-			 out.print("<br>");
-				
-				out.print("<form action=\"modifierPageEvenementDetail.jsp\">");
-				out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
-				out.print("<button type=\"submit\">Modifier</button><br>");
-				out.print("</form>");
-		}
 	%>
 
 
