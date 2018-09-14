@@ -7,7 +7,6 @@ Font: Roboto
 */
 * {
 	font-family: Roboto, serif, sans-serif;
-	
 }
 
 .header {
@@ -94,7 +93,6 @@ a {
 	background-color: #FAEBDA;
 }
 
-
 .signTitle {
 	margin-top: 8%;
 	margin-bottom: 3%;
@@ -125,4 +123,24 @@ fieldset {
 	font-size: 2rem;
 	margin-left: 2%;
 	margin-bottom: 2%;
+}
+
+.eventList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.eventStyle {
+	border: 1px solid black;
+	padding: 10px;
+	margin: 20px;
+	font-size: 1.5rem;
+	text-align: center;
+	width: 25vw;
+}
+
+.eventStyle:hover {
+	 transform: scale(1.2);
 }

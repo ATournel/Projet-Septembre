@@ -50,8 +50,9 @@
 			</tr>
 			<tr>
 				<td><form action="pageEvenementSearch.jsp">
-						<input type="text" class="search-bar" name="eventName" placeholder="Evenement..">
-						<select name="categorie">
+						<input type="text" class="search-bar" name="eventName"
+							placeholder="Evenement.."> <select name="categorie"
+							class="search-bar">
 							<option></option>
 							<option>Atelier Coworking</option>
 							<option>Hackathon</option>
@@ -66,27 +67,27 @@
 			</tr>
 		</table>
 	</div>
+	<h2>Les derniers événements:</h2>
+	<div class="eventList">
 
-	<div class="lastEvents">
-		<h2>Les derniers événements:</h2>
 
 		<%
-			out.println("<ul>");
+			
 			for (int i = 0; i < listeEvent.size(); i++) {
-				out.println("<li>");
-				out.print("<strong>");
+				out.println("<div class='eventStyle'>");
+				out.println("</br>");
+				out.println("<h2>");
 				out.print(listeEvent.get(i).getNom());
-				out.print("</strong>");
-				out.print(" dans la categorie ");
-				out.print("<em>");
+				out.println("<h2>");
+				out.print("<p>");
 				out.print(listeEvent.get(i).getCategorie());
-				out.print("</em>");
-				out.print(", ");
+				out.print("</p>");
+				out.print("<p>");
 				out.print(listeEvent.get(i).getLieu());
-				out.println("</li>");
-				out.println("<br />");
+				out.print("</p>");
+				out.println("</div>");
 			}
-			out.println("</ul>");
+			
 		%>
 
 	</div>
