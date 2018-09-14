@@ -76,7 +76,7 @@ public class SignInServlet extends HttpServlet {
 
 		String logged = "<p>Welcome " + login
 				+ "<br /><form action='ProfilPerso' method='post'><input type='hidden' value='" + login
-				+ "' name='userLogin'><input type='submit'></form></p>";
+				+ "' name='userLogin'><input type='submit' value='Voir mon profil'></form></p>";
 		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n"
 				+ "			<li><a href=\"Sign_in\">Connexion</a>";
 		session.setAttribute("connect", notLogged);
