@@ -34,6 +34,7 @@
 		instanceEventList.setHeurefinEvenement(result.getString("heurefinEvenement"));
 		instanceEventList.setDateDebutEvenement(result.getString("dateDebutEvenement"));
 		instanceEventList.setDateFinEvenement(result.getString("dateFinEvenement"));
+		instanceEventList.setIdEvenement(result.getInt("id_evenement"));
 
 		listEventPage.add(instanceEventList);
 
@@ -46,16 +47,38 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
-<body>
+<body class="eventPageBody">
 
 	<jsp:include page="header.jsp"></jsp:include>
 
+	<div class="bandeau">
+		<table>
+			<tr>
+				<td><h1>Vous cherchez un événement?</h1></td>
+			</tr>
+			<tr>
+				<td><form action="pageEvenementSearch.jsp">
+						<input type="text" class="search-bar" name="eventName"
+							placeholder="Evenement.."> <select name="categorie"
+							class="search-bar">
+							<option></option>
+							<option>Atelier Coworking</option>
+							<option>Hackathon</option>
+						</select> <input type="submit" class="search-icon" value="Trouver">
+					</form></td>
+			</tr>
+
+		</table>
+	</div>
+
 	<h3>
-		Créer un Evenement: <a href="formulaireEvenement.jsp">Go!</a>
+		Créer mon Evenement: <a href="formulaireEvenement.jsp">Go!</a>
 	</h3>
 	<br />
 	<br />
 	<div class="eventList">
+
+
 
 		<%
 			for (int i = 0; i < listEventPage.size(); i++) {

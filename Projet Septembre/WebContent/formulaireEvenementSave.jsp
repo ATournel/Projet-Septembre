@@ -36,7 +36,6 @@ if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 		String mailCompte = (String)session.getAttribute("mailCompte");
 	
 		
-		 
 				
 	 Class.forName("com.mysql.jdbc.Driver");
 		
@@ -58,7 +57,6 @@ if(Boolean.TRUE.equals(session.getAttribute("isConnected"))) {
 		ps.setString(8, dateDebutEvenement);
 		ps.setString(9, dateFinEvenement);		
 		ps.setString(10, capacite);
-		//ps.setDate(10, dateFinEvenement);
 		
 	            
 	    int i = ps.executeUpdate();

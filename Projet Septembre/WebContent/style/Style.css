@@ -90,7 +90,7 @@ a {
 	margin-left: 36%;
 	margin-right: 36%;
 	margin-bottom: 10%;
-	background-color: #FAEBDA;
+	background-color: rgba(54, 25, 25, .10);
 }
 
 .signTitle {
@@ -130,6 +130,12 @@ fieldset {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	
+}
+
+.eventPageBody {
+	background-image: url("");
+	background-size: cover;
 }
 
 .eventStyle {
@@ -139,6 +145,7 @@ fieldset {
 	font-size: 1.5rem;
 	text-align: center;
 	width: 25vw;
+	background: rgba(54, 25, 25, .50); 
 }
 
 .eventStyle:hover {
