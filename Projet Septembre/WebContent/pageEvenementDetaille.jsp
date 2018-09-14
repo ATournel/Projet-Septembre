@@ -27,6 +27,7 @@
 		Connection cn = null;
 		Statement st = null;
 		int eventId = Integer.parseInt(request.getParameter("eventId"));
+		// verification System.out.println("page evenementDetail:" + eventId);
 		// recuperation de la connexion
 		cn = DriverManager.getConnection(url, user, pwd);
 		//creation d un statement 

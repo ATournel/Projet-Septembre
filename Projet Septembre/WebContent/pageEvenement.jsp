@@ -8,25 +8,24 @@
 <%@page import="projetSept.EventList"%>
 <%
 	ArrayList<EventList> listEventPage = new ArrayList<EventList>();
-	
+
 	Class.forName("com.mysql.jdbc.Driver");
-	
+
 	String url = "jdbc:mysql://localhost/mayagenda?useSSL=false";
 	String user = "root";
 	String pwd = "Ioplop88";//Ioplop88
 	Connection cn = DriverManager.getConnection(url, user, pwd);
 	Statement st = cn.createStatement();
-	
+
 	String sql = "SELECT * FROM mayagenda.evenement order by dateDebutEvenement DESC";
-	
+
 	//execution requete 
 	ResultSet result = st.executeQuery(sql);
-	
-	
+
 	while (result.next()) { // ne fonctionne qu'avec le while, solution à trouver !
-	
+
 		EventList instanceEventList = new EventList();
-						
+
 		instanceEventList.setNom(result.getString("nom"));
 		instanceEventList.setCategorie(result.getString("categorie"));
 		instanceEventList.setLieu(result.getString("lieu"));
@@ -35,10 +34,9 @@
 		instanceEventList.setHeurefinEvenement(result.getString("heurefinEvenement"));
 		instanceEventList.setDateDebutEvenement(result.getString("dateDebutEvenement"));
 		instanceEventList.setDateFinEvenement(result.getString("dateFinEvenement"));
-		
-		
+
 		listEventPage.add(instanceEventList);
-			
+
 	}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -60,48 +58,49 @@
 	<div class="eventList">
 
 		<%
-		
-			
 			for (int i = 0; i < listEventPage.size(); i++) {
 				out.print("<div class='eventStyle'>");
 				out.print("<br>");
 				out.println("<h2><strong>" + listEventPage.get(i).getNom() + "</strong></h2>");
-				out.println("<p>"+listEventPage.get(i).getCategorie()+"</p>");
-				out.println("<p>Le "+listEventPage.get(i).getDateDebutEvenement()+"</br>à "+listEventPage.get(i).getLieu()+"</p>");				
+				out.println("<p>" + listEventPage.get(i).getCategorie() + "</p>");
+				out.println("<p>Le " + listEventPage.get(i).getDateDebutEvenement() + "</br>à"
+						+ listEventPage.get(i).getLieu() + "</p>");
 				out.print("<br>");
 
 				Statement st2 = cn.createStatement();
+
 				String login = (String) session.getAttribute("mailCompte");
 				System.out.println(login);
-				String sql2 = "SELECT * FROM mayagenda.participant WHERE id_evenement=" + listEventPage.get(i).getIdEvenement()
-						+ " AND mail_participant='" + login + "'";
+
+				String sql2 = "SELECT * FROM mayagenda.participant WHERE id_evenement="
+						+ listEventPage.get(i).getIdEvenement() + " AND mail_participant='" + login + "'";
 				ResultSet result2 = st2.executeQuery(sql2);
 				String presence = "";
 
 				while (result2.next()) {
-
 					presence = result2.getString("presence");
 
 					if (presence.equals("participe")) {
 						out.print("<form action=\"eventDetailOk.jsp\">");
-						out.print("<input type='hidden' name='eventId' value=" + listEventPage.get(i).getIdEvenement() + ">");
+						out.print("<input type='hidden' name='eventId' value=" + listEventPage.get(i).getIdEvenement()
+								+ ">");
 						out.print("<button type=\"submit\">Détails</button><br>");
 						out.print("</form>");
-					} else if (presence.equals("peut-être")){
+					} else if (presence.equals("peut-être")) {
 						out.print("<form action=\"eventDetailPeutEtre.jsp\">");
-						out.print("<input type='hidden' name='eventId' value=" + listEventPage.get(i).getIdEvenement() + ">");
+						out.print("<input type='hidden' name='eventId' value=" + listEventPage.get(i).getIdEvenement()
+								+ ">");
 						out.print("<button type=\"submit\">Détails</button><br>");
 						out.print("</form>");
 					}
-
 				}
 				if (presence.equals("")) {
 					out.print("<form action=\"pageEvenementDetaille.jsp\">");
-					out.print("<input type='hidden' name='eventId' value=" + listEventPage.get(i).getIdEvenement() + ">");
+					out.print(
+							"<input type='hidden' name='eventId' value=" + listEventPage.get(i).getIdEvenement() + ">");
 					out.print("<button type=\"submit\">Détails</button><br>");
 					out.print("</form>");
 					out.print("<br>");
-
 				}
 				out.print("</div>");
 			}

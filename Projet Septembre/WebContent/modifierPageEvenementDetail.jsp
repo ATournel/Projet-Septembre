@@ -27,6 +27,7 @@
 		Connection cn = null;
 		Statement st = null;
 		int eventId = Integer.parseInt(request.getParameter("eventId"));
+		// verification System.out.println("page modifier evenementDetail:" + eventId);
 		// recuperation de la connexion
 		cn = DriverManager.getConnection(url, user, pwd);
 		//creation d un statement 
@@ -73,26 +74,44 @@
 			
 			
 			int id_evenement = result.getInt("id_evenement");
-			
+			capacite = result.getInt("capacite");
 			
 			dateDebutEvenement = result.getString("dateDebutEvenement");
 			dateFinEvenement = result.getString("dateFinEvenement");
-
-			out.println("<h1>");
-			out.println("<strong>" + nom + " - </strong> ( "+ categorie + ") ");
-			out.println("</h1>");
-			out.println("<p>");
-			out.println("Date " + dateDebutEvenement + " / " + dateFinEvenement);
-			out.println("<br>");
-			out.println(heureDebutEvenement + " à " + heurefinEvenement + "    - Lieu :" + lieu);
-			out.println("</p>");
-			out.println("<p>");
-			out.println(description);
-			out.println("</p>");
+			
+		
+			
+			out.print("<form class=\"signForm\" action=\"modificationPageEvenementDetailSave.jsp\">");
+			out.print("<table>");
+			out.print("<tr><td>Titre de l'événement:</td><td><input type=\"text\" name=\"nom\" value="+nom+"\"></td></tr>");
+			out.print("<tr> <td> Catégorie: </td><td>");
+			out.print("<select name=\"catégorie\" value="+categorie+"\">");
+			out.print("<option></option>");
+			out.print("<option>Atelier Coworking</option>");
+			out.print("<option>Hackathon</option>");
+			out.print("</select> <br/></td></tr>");
+			
+			out.print("<tr><td>Lieu :</td><td><input type=\"text\" name=\"lieu\" value="+ lieu +"></td></tr>");
+			out.print("<tr><td>Date début :</td><td><input type=\"date\" date=\"dateDebutEvenement\" value="+ dateDebutEvenement +"></td></tr>");
+			out.print("<tr><td>Heure de début :</td><td><input type=\"text\" name=\"heureDebutEvenement\" value="+ heureDebutEvenement +"></td></tr>");
+			out.print("<tr><td>Date de fin :</td><td><input type=\"date\" name=\"dateFinEvenement\" value="+ dateFinEvenement +"></td></tr>");
+			out.print("<tr><td>Heure de fin :</td><td><input type=\"text\" name=\"heurefinEvenement\" value="+ heurefinEvenement +"></td></tr>");
+			out.print("<tr><td>Nombre de places :</td><td><input type=\"text\" name=\"capacite\" value="+ capacite +"></td></tr>");
+			out.print("<tr><td>Description :</td><td><input type=\"textarea\" name=\"description\" value="+ description +"></td></tr>");
+			
+			
+			out.print("<input type='hidden' name='eventId' value=" + id_evenement + ">");
+			out.print("<tr><td><input type=\"submit\" value=\"VALIDER\"></td></tr>");
+			out.print("</table>");
+			out.print("</form>");
+			out.print("");
+			
+			
+						
 
 			}
 	%>
 
-
+	
 </body>
 </html>
