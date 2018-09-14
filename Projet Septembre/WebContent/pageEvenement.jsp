@@ -56,6 +56,7 @@
 
 			int id_evenement = result.getInt("id_evenement");
 			session.setAttribute("id_evenement", id_evenement);
+			// verification System.out.println("page evenement:" + id_evenement);
 
 			nom = result.getString("nom");
 			categorie = result.getString("categorie");
