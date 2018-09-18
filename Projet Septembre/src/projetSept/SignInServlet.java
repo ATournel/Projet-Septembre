@@ -74,7 +74,9 @@ public class SignInServlet extends HttpServlet {
 		ResultSet result2 = null;
 		Login instanceLogin = new Login();
 
-		String logged = "<p>Welcome " + login + "<br /><a href='profil.jsp'>Voir mon profil</a></p>";
+		String logged = "<p>Welcome " + login
+				+ "<br /><form action='profilPerso' method='post'><input type='hidden' value='" + login
+				+ "' name='userLogin'><input type='submit' value='Voir mon profil'></form></p>";
 		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n"
 				+ "			<li><a href=\"Sign_in\">Connexion</a>";
 		session.setAttribute("connect", notLogged);
@@ -87,6 +89,7 @@ public class SignInServlet extends HttpServlet {
 			String url = "jdbc:mysql://localhost:3306/mayagenda?useSSL=false";
 			String user = "root";
 			String psw = "ioplop88";
+
 
 			Connection con = (Connection) DriverManager.getConnection(url, user, psw);
 
