@@ -49,8 +49,8 @@ public class SignInServlet extends HttpServlet {
 		session.setAttribute("sessionLogin", login);
 		session.setAttribute("sessionPwd", pwd);
 
-		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n"
-				+ "			<li><a href=\"Sign_in\">Connexion</a>";
+		String notLogged = "<a href='subscribe.jsp' class='orgBtn'>Inscription</a> - "
+				+ "			<a href='Sign_in' class='orgBtn'>Connexion</a>";
 		session.setAttribute("connect", notLogged);
 
 		request.getRequestDispatcher("/signInForm.jsp").forward(request, response);
@@ -75,11 +75,9 @@ public class SignInServlet extends HttpServlet {
 		ResultSet result2 = null;
 		Login instanceLogin = new Login();
 
-		String logged = "<p>Welcome " + login
-				+ "<br /><form action='ProfilPerso' method='post'><input type='hidden' value='" + login
-				+ "' name='userLogin'><input type='submit' value='Voir mon profil'></form></p>";
-		String notLogged = "<a href=\"subscribe.jsp\">Inscription/</a></li>\r\n"
-				+ "			<li><a href=\"Sign_in\">Connexion</a>";
+		String logged = "<form action='ProfilPerso' method='post'><input type='hidden' value='" + login
+				+ "' name='userLogin'><input type='submit' value='Voir mon profil' class=\"btn btn-primary\"></form>";
+		String notLogged = "<a href='subscribe.jsp' class=\"btn btn-primary\">Inscription</a> <a href='Sign_in' class=\"btn btn-primary\">Connexion</a>";
 		session.setAttribute("connect", notLogged);
 		String mailCompte = "";
 

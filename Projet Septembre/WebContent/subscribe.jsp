@@ -6,12 +6,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Subscribe</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
 <body>
-	<form action="subscribeSave.jsp">
-		<jsp:include page="header3.html"></jsp:include>
+	<jsp:include page="header3.html"></jsp:include>
 
-		<H1>FORMULAIRE D'INSCRIPTION</H1>
+	<H1 class="signTitle">Formulaire d'inscription</H1>
+
+	<form action="subscribeSave.jsp" class="signForm">
+
 		<table>
 			<tr>
 				<td>Nom:</td>
@@ -19,8 +26,6 @@
 			</tr>
 			<tr>
 				<td>Prénom:</td>
-			</tr>
-			<tr>
 				<td><input type="text" name="prenom"></td>
 			</tr>
 			<tr>
@@ -29,8 +34,6 @@
 			</tr>
 			<tr>
 				<td>Mail:</td>
-			</tr>
-			<tr>
 				<td><input type="text" name="mail_compte"></td>
 			</tr>
 			<tr>
@@ -46,6 +49,7 @@
 			<tr>
 				<td><input type="submit" value="Valider"></td>
 			</tr>
+
 
 		</table>
 

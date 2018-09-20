@@ -9,21 +9,12 @@ Font: Roboto
 	font-family: Roboto, serif, sans-serif;
 }
 
-.header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 1%;
-	background-color: #FAEBDA;
-}
-
-.header a {
-	padding-top: 2vh;
+.col {
+	padding-top: 40px;
 }
 
 .footer {
 	padding: 1%;
-	background-color: #FAEBDA;
 }
 
 .hul {
@@ -41,20 +32,27 @@ ul {
 	list-style: none;
 }
 
-a {
-	text-decoration: none;
+.logo {
+	padding-left: 3vw;
+}
+
+.btn-primary {
+	margin-top: 20px;
 }
 
 .bandeau {
 	height: 55vh;
-	background-color: #ff5c39;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/05/16/42/5659b3a38252258.jpg");
+	background-position: center;
+	background-size: cover;
 }
 
 .bandeau h1 {
-	font-size: 2.5rem;
+	font-size: 3.5rem;
+	color: white;
 }
 
 .search-icon {
@@ -145,7 +143,7 @@ fieldset {
 	font-size: 1.5rem;
 	text-align: center;
 	width: 25vw;
-	background: rgba(54, 25, 25, .50); 
+	background: rgba(54, 25, 25, .25); 
 }
 
 .eventStyle:hover {

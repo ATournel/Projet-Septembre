@@ -39,6 +39,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home Page</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
 <body>
@@ -59,12 +63,7 @@
 						</select> <input type="submit" class="search-icon" value="Trouver">
 					</form></td>
 			</tr>
-			<tr>
-				<td><ul class="bande-ul">
-						<li><a href="Sign_in">Connexion</a></li>
-						<li><a href="subscribe.jsp">Inscription</a></li>
-					</ul></td>
-			</tr>
+			
 		</table>
 	</div>
 	<h2>Les derniers événements:</h2>
@@ -78,11 +77,11 @@
 				out.println("</br>");
 				out.println("<h2>");
 				out.print(listeEvent.get(i).getNom());
-				out.println("<h2>");
+				out.println("</h2>");
 				out.print("<p>");
 				out.print(listeEvent.get(i).getCategorie());
 				out.print("</p>");
-				out.print("<p>");
+				out.print("<p>Le "+listeEvent.get(i).getDate()+" à ");
 				out.print(listeEvent.get(i).getLieu());
 				out.print("</p>");
 				out.println("</div>");
