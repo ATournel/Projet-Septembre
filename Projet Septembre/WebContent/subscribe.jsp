@@ -12,7 +12,7 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
-<body>
+<body class="subscribeBody">
 	<jsp:include page="header3.html"></jsp:include>
 
 	<H1 class="signTitle">Formulaire d'inscription</H1>
@@ -21,24 +21,20 @@
 
 		<table>
 			<tr>
-				<td>Nom:</td>
-				<td><input type="text" name="nom"></td>
+				<td><input type="text" name="nom" placeholder="Nom"></td>
 			</tr>
 			<tr>
-				<td>Prénom:</td>
-				<td><input type="text" name="prenom"></td>
+				<td><input type="text" name="prenom" placeholder="Prénom"></td>
 			</tr>
 			<tr>
-				<td>Pseudo:</td>
-				<td><input type="text" name="pseudo"></td>
+				<td><input type="text" name="pseudo" placeholder="Pseudo"></td>
 			</tr>
 			<tr>
-				<td>Mail:</td>
-				<td><input type="text" name="mail_compte"></td>
+				<td><input type="text" name="mail_compte" placeholder="Mail"></td>
 			</tr>
 			<tr>
-				<td>Mot de passe:</td>
-				<td><input type="password" name="mdp"></td>
+				<td><input type="password" name="mdp"
+					placeholder="Mot de passe"></td>
 			</tr>
 			<tr>
 				<td><p></p></td>

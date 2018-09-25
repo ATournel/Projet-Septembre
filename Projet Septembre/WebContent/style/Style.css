@@ -7,15 +7,55 @@ Font: Roboto
 */
 * {
 	font-family: Roboto, serif, sans-serif;
+	/*border:1px solid black;*/
 }
 
 .col {
-	padding-top: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.homeBody {
+	background:
+		url(horlogeVirtuelleMur.jpg)
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
+}
+
+.signInBody {
+	background:
+		url(horlogeVirtuelleMur.jpg)
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
+}
+
+.subscribeBody {
+	background:
+		url(horlogeElectroChambre.jpg)
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
 }
 
 .footer {
 	padding: 1%;
 }
+
 
 .hul {
 	display: flex;
@@ -36,23 +76,59 @@ ul {
 	padding-left: 3vw;
 }
 
-.btn-primary {
-	margin-top: 20px;
+.bigLink {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1.5rem;
+	font-family: Roboto;
+	border: none;
+	background-color: #FF7F00;
+}
+
+.a {
+	text-decoration: none;
+}
+
+.a:hover {
+	text-decoration: none;
+}
+
+.bigLink:hover {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1.5rem;
+	font-family: Roboto;
+	border: none;
+	background-color: #FF7F00;
+	cursor: pointer;
+}
+
+.bigLink:visited {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1.5rem;
+	font-family: Roboto;
+	border: none;
+	background-color: #FF7F00;
 }
 
 .bandeau {
-	height: 55vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/05/16/42/5659b3a38252258.jpg");
 	background-position: center;
 	background-size: cover;
+	margin-bottom: 5%;
 }
 
 .bandeau h1 {
 	font-size: 3.5rem;
-	color: white;
+	color: #000000;
+}
+
+.navBar {
+	background-color: #FF7F00;	
+	margin-bottom: 2%;
 }
 
 .search-icon {
@@ -60,12 +136,26 @@ ul {
 	width: auto;
 }
 
+.search-bar1 {
+	height: 6vh;
+	width: 25vw;
+}
+
 .search-bar {
-	height: 4.25vh;
+	height: 6vh;
 	width: 15vw;
-	margin-top: 2%;
-	margin-bottom: 2%;
-	margin-left: 20%;
+}
+
+.btn-outline-secondary{
+	background-color: #FF7F00;
+	color: #ffffff;
+	border: none;
+	border-radius: 0%;
+}
+
+.btn-outline-secondary:hover{
+	background-color: #FF7F00;
+	color: #ffffff;
 }
 
 .bande-ul {
@@ -80,7 +170,6 @@ ul {
 }
 
 .signForm {
-	border: 1px solid white;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 30px;
@@ -88,7 +177,10 @@ ul {
 	margin-left: 36%;
 	margin-right: 36%;
 	margin-bottom: 10%;
-	background-color: rgba(54, 25, 25, .10);
+}
+
+.signInForm {
+	text-align: center;
 }
 
 .signTitle {
@@ -143,7 +235,7 @@ fieldset {
 	font-size: 1.5rem;
 	text-align: center;
 	width: 25vw;
-	background: rgba(54, 25, 25, .25); 
+	background: #ffffff; 
 }
 
 .eventStyle:hover {

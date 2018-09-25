@@ -11,36 +11,28 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
-<body>
+<body class="signInBody">
 	<jsp:include page="header3.html"></jsp:include>
-	<h1 class="signTitle">Connexion</h1>
+	<div class="signInForm">
+		<h1 class="signTitle">Connexion</h1>
 
-	<form class="signForm" name="signin" action="Sign_in" method="post">
-		<table>
-			<tr>
-				<td>Pseudo:</td>
-				<td><input type="text" name="pseudo" value='${sessionLogin}'></td>
-			</tr>
-			<tr></tr>
-			<tr>
-				<td>Mot de passe:</td>
-				<td><input type="password" name="password"></td>
-			</tr>
-			<tr>
-				<td><p></p></td>
-			</tr>
-			<tr>
-				<td></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Valider"></td>
-			</tr>
-		</table>
-		<p class="invalid">Pseudo ou mot de passe invalide!</p>
-		<p>
-			Pas encore membre? <a href="subscribe.jsp">Inscription</a>
-		</p>
-	</form>
+		<form class="signForm" name="signin" action="Sign_in" method="post">
+			<div class="form-group">
+				<input type="text" name="pseudo" value='${sessionLogin}'
+					placeholder="Pseudo">
+			</div>
+			<div class="form-group">
+				<input type="password" name="password" placeholder="Mot de passe">
+			</div>
+			<div class="form-group"><p class="invalid">Pseudo ou mot de passe invalide!</p></div>
+			<input type="submit" value="Valider">
+			<div class="form-group">
+				<p>
+					Pas encore membre? <a href="subscribe.jsp">Inscription</a>
+				</p>
+			</div>
+		</form>
+	</div>
 	<jsp:include page="footer.html"></jsp:include>
 </body>
 </html>

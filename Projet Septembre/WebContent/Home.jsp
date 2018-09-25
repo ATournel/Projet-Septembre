@@ -45,27 +45,9 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
-<body>
+<body class="homeBody">
 	<jsp:include page="header.jsp"></jsp:include>
-	<div class="bandeau">
-		<table>
-			<tr>
-				<td><h1>Vous cherchez un événement?</h1></td>
-			</tr>
-			<tr>
-				<td><form action="pageEvenementSearch.jsp">
-						<input type="text" class="search-bar" name="eventName"
-							placeholder="Evenement.."> <select name="categorie"
-							class="search-bar">
-							<option></option>
-							<option>Atelier Coworking</option>
-							<option>Hackathon</option>
-						</select> <input type="submit" class="search-icon" value="Trouver">
-					</form></td>
-			</tr>
-			
-		</table>
-	</div>
+	
 	<h2>Les derniers événements:</h2>
 	<div class="eventList">
 
@@ -90,7 +72,7 @@
 		%>
 
 	</div>
-	<a class="voirPlus" href="pageEvenement.jsp">Plus d'événements ...</a>
+	<a href="pageEvenement.jsp">Plus d'événements ...</a>
 	<jsp:include page="footer.html"></jsp:include>
 </body>
 </html>
