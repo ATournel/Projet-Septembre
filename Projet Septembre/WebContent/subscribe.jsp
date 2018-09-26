@@ -13,46 +13,37 @@
 <link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
 <body class="subscribeBody">
-	<jsp:include page="header3.html"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 
-	<H1 class="signTitle">Formulaire d'inscription</H1>
+	<div class="signInForm">
 
-	<form action="subscribeSave.jsp" class="signForm">
-
-		<table>
-			<tr>
-				<td><input type="text" name="nom" placeholder="Nom"></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="prenom" placeholder="Prénom"></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="pseudo" placeholder="Pseudo"></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="mail_compte" placeholder="Mail"></td>
-			</tr>
-			<tr>
-				<td><input type="password" name="mdp"
-					placeholder="Mot de passe"></td>
-			</tr>
-			<tr>
-				<td><p></p></td>
-			</tr>
-			<tr>
-				<td><p></p></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Valider"></td>
-			</tr>
-
-
-		</table>
-
-		<p>
-			Déjà membre? <a href="signInForm.jsp">Connexion</a>
-		</p>
-	</form>
-
+		<form action="subscribeSave.jsp" class="signForm">
+			<H1 class="signTitle">Formulaire d'inscription</H1>
+			<div class="form-group">
+				<input type="text" name="nom" placeholder="Nom">
+			</div>
+			<div class="form-group">
+				<input type="text" name="prenom" placeholder="Prénom">
+			</div>
+			<div class="form-group">
+				<input type="text" name="pseudo" placeholder="Pseudo">
+			</div>
+			<div class="form-group">
+				<input type="text" name="mail_compte" placeholder="Mail">
+			</div>
+			<div class="form-group">
+				<input type="password" name="mdp" placeholder="Mot de passe">
+			</div>
+			<div class="form-group">
+				<p></p>
+			</div>
+			<input type="submit" value="Valider">
+			<div class="form-group">
+				<p>
+					Déjà membre? <a href="signInForm.jsp">Connexion</a>
+				</p>
+			</div>
+		</form>
+	</div>
 	<jsp:include page="footer.html"></jsp:include>
 </body>

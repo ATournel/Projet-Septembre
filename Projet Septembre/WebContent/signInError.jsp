@@ -12,11 +12,12 @@
 <link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
 <body class="signInBody">
-	<jsp:include page="header3.html"></jsp:include>
+	<jsp:include page="header.jsp"></jsp:include>
 	<div class="signInForm">
-		<h1 class="signTitle">Connexion</h1>
+
 
 		<form class="signForm" name="signin" action="Sign_in" method="post">
+			<h1 class="signTitle">Connexion</h1>
 			<div class="form-group">
 				<input type="text" name="pseudo" value='${sessionLogin}'
 					placeholder="Pseudo">
@@ -24,7 +25,9 @@
 			<div class="form-group">
 				<input type="password" name="password" placeholder="Mot de passe">
 			</div>
-			<div class="form-group"><p class="invalid">Pseudo ou mot de passe invalide!</p></div>
+			<div class="form-group">
+				<p class="invalid">Pseudo ou mot de passe invalide!</p>
+			</div>
 			<input type="submit" value="Valider">
 			<div class="form-group">
 				<p>

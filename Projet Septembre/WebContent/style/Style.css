@@ -1,12 +1,14 @@
 @charset "ISO-8859-1";
 
-/*Colors:
+/*Charte reclamée par le client
+Colors:
 Pantone 171 C = #ff5c39
 Pantone 9224U = #FAEBDA
-Font: Roboto
+Font: Lato
 */
+
 * {
-	font-family: Roboto, serif, sans-serif;
+	font-family: Lato, serif, sans-serif;
 	/*border:1px solid black;*/
 }
 
@@ -14,6 +16,20 @@ Font: Roboto
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+
+/*Gestion des images de fond des pages*/
+.eventPageBody {
+	background:
+		url(agendaLivreElectro.jpg)
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
 }
 
 .homeBody {
@@ -42,7 +58,7 @@ Font: Roboto
 
 .subscribeBody {
 	background:
-		url(horlogeElectroChambre.jpg)
+		url(horlogeVirtuelleMur.jpg)
 		no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -53,7 +69,8 @@ Font: Roboto
 }
 
 .footer {
-	padding: 1%;
+	padding: 1%;	
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -76,28 +93,32 @@ ul {
 	padding-left: 3vw;
 }
 
+/*Gestion des styles des differents boutons*/
+
 .bigLink {
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 1.5rem;
-	font-family: Roboto;
+	font-family: Lato;
 	border: none;
 	background-color: #FF7F00;
 }
 
-.a {
+a {
 	text-decoration: none;
+	font-size: 1.25rem;
 }
 
-.a:hover {
-	text-decoration: none;
+a:hover {
+	text-decoration: none;	
+	font-size: 1.35rem;
 }
 
 .bigLink:hover {
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 1.5rem;
-	font-family: Roboto;
+	font-family: Lato;
 	border: none;
 	background-color: #FF7F00;
 	cursor: pointer;
@@ -107,24 +128,28 @@ ul {
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 1.5rem;
-	font-family: Roboto;
+	font-family: Lato;
 	border: none;
 	background-color: #FF7F00;
 }
+
+/*Gestion du bandeau du header*/
 
 .bandeau {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-position: center;
-	background-size: cover;
 	margin-bottom: 5%;
+	margin-top: 3%;
 }
 
 .bandeau h1 {
 	font-size: 3.5rem;
 	color: #000000;
+	text-shadow: #D3D3D3 0.2px 0.2px, #D3D3D3 -0.2px 0.2px, #D3D3D3 -0.2px -0.2px, #D3D3D3 0.2px -0.2px;
 }
+
+/*Barre de navigation sous le bandeau du header*/
 
 .navBar {
 	background-color: #FF7F00;	
@@ -145,6 +170,8 @@ ul {
 	height: 6vh;
 	width: 15vw;
 }
+
+/*Modification des boutons Bootstrap*/
 
 .btn-outline-secondary{
 	background-color: #FF7F00;
@@ -169,14 +196,19 @@ ul {
 	margin-left: 10%;
 }
 
+/*Style des formulaires*/
+
 .signForm {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 5%;
 	margin-left: 36%;
 	margin-right: 36%;
 	margin-bottom: 10%;
+	transform: scale(1.2);
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
 .signInForm {
@@ -197,6 +229,8 @@ fieldset {
 	border: none;
 }
 
+/*Style des listes d'evenements*/
+
 .lastEvents li {
 	border: 1px solid black;
 	padding: 10px;
@@ -213,6 +247,7 @@ fieldset {
 	font-size: 2rem;
 	margin-left: 2%;
 	margin-bottom: 2%;
+	color: #000000;
 }
 
 .eventList {
@@ -223,11 +258,6 @@ fieldset {
 	
 }
 
-.eventPageBody {
-	background-image: url("");
-	background-size: cover;
-}
-
 .eventStyle {
 	border: 1px solid black;
 	padding: 10px;
@@ -235,7 +265,7 @@ fieldset {
 	font-size: 1.5rem;
 	text-align: center;
 	width: 25vw;
-	background: #ffffff; 
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
 .eventStyle:hover {
