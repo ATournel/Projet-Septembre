@@ -4,11 +4,10 @@
 Colors:
 Pantone 171 C = #ff5c39
 Pantone 9224U = #FAEBDA
-Font: Lato
+Font: Arial
 */
-
 * {
-	font-family: Lato, serif, sans-serif;
+	font-family: Arial, serif, sans-serif;
 	/*border:1px solid black;*/
 }
 
@@ -18,12 +17,9 @@ Font: Lato
 	align-items: center;
 }
 
-
 /*Gestion des images de fond des pages*/
 .eventPageBody {
-	background:
-		url(agendaLivreElectro.jpg)
-		no-repeat center center fixed;
+	background: url(agendaLivreElectro.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -33,9 +29,7 @@ Font: Lato
 }
 
 .homeBody {
-	background:
-		url(horlogeVirtuelleMur.jpg)
-		no-repeat center center fixed;
+	background: url(horlogeVirtuelleMur.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -45,9 +39,7 @@ Font: Lato
 }
 
 .signInBody {
-	background:
-		url(horlogeVirtuelleMur.jpg)
-		no-repeat center center fixed;
+	background: url(horlogeVirtuelleMur.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -57,9 +49,17 @@ Font: Lato
 }
 
 .subscribeBody {
-	background:
-		url(horlogeVirtuelleMur.jpg)
-		no-repeat center center fixed;
+	background: url(horlogeVirtuelleMur.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
+}
+
+.createEventBody {
+	background: url(notebook-stamp.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -69,10 +69,9 @@ Font: Lato
 }
 
 .footer {
-	padding: 1%;	
+	padding: 1%;
 	background-color: rgba(255, 255, 255, 0.6);
 }
-
 
 .hul {
 	display: flex;
@@ -94,12 +93,11 @@ ul {
 }
 
 /*Gestion des styles des differents boutons*/
-
 .bigLink {
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 1.5rem;
-	font-family: Lato;
+	font-family: Arial;
 	border: none;
 	background-color: #FF7F00;
 }
@@ -110,15 +108,29 @@ a {
 }
 
 a:hover {
-	text-decoration: none;	
-	font-size: 1.35rem;
+	text-decoration: none;
+	font-size: 1.30rem;
+}
+
+.voirPlus {
+	font-size: 2rem;
+	margin-left: 2%;
+	margin-bottom: 2%;
+	color: #000000;
+}
+
+.voirPlus:hover {
+	font-size: 2.05rem;
+	margin-left: 2%;
+	margin-bottom: 2%;
+	color: #000000;
 }
 
 .bigLink:hover {
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 1.5rem;
-	font-family: Lato;
+	font-family: Arial;
 	border: none;
 	background-color: #FF7F00;
 	cursor: pointer;
@@ -128,13 +140,12 @@ a:hover {
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 1.5rem;
-	font-family: Lato;
+	font-family: Arial;
 	border: none;
 	background-color: #FF7F00;
 }
 
 /*Gestion du bandeau du header*/
-
 .bandeau {
 	display: flex;
 	justify-content: center;
@@ -144,15 +155,15 @@ a:hover {
 }
 
 .bandeau h1 {
-	font-size: 3.5rem;
+	font-size: 2.5rem;
 	color: #000000;
-	text-shadow: #D3D3D3 0.2px 0.2px, #D3D3D3 -0.2px 0.2px, #D3D3D3 -0.2px -0.2px, #D3D3D3 0.2px -0.2px;
+	text-shadow: #D3D3D3 0.2px 0.2px, #D3D3D3 -0.2px 0.2px, #D3D3D3 -0.2px
+		-0.2px, #D3D3D3 0.2px -0.2px;
 }
 
 /*Barre de navigation sous le bandeau du header*/
-
 .navBar {
-	background-color: #FF7F00;	
+	background-color: #FF7F00;
 	margin-bottom: 2%;
 }
 
@@ -172,15 +183,14 @@ a:hover {
 }
 
 /*Modification des boutons Bootstrap*/
-
-.btn-outline-secondary{
+.btn-outline-secondary {
 	background-color: #FF7F00;
 	color: #ffffff;
 	border: none;
 	border-radius: 0%;
 }
 
-.btn-outline-secondary:hover{
+.btn-outline-secondary:hover {
 	background-color: #FF7F00;
 	color: #ffffff;
 }
@@ -197,7 +207,6 @@ a:hover {
 }
 
 /*Style des formulaires*/
-
 .signForm {
 	padding-left: 0px;
 	padding-right: 0px;
@@ -219,6 +228,7 @@ a:hover {
 	margin-top: 8%;
 	margin-bottom: 3%;
 	text-align: center;
+	color: #000000;
 }
 
 .invalid {
@@ -230,7 +240,6 @@ fieldset {
 }
 
 /*Style des listes d'evenements*/
-
 .lastEvents li {
 	border: 1px solid black;
 	padding: 10px;
@@ -239,14 +248,12 @@ fieldset {
 }
 
 .lastEvents h2 {
+	color: #000000;
 	text-align: center;
 	font-size: 2.5rem;
 }
 
-.voirPlus {
-	font-size: 2rem;
-	margin-left: 2%;
-	margin-bottom: 2%;
+.divTitle {
 	color: #000000;
 }
 
@@ -255,7 +262,6 @@ fieldset {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	
 }
 
 .eventStyle {
@@ -269,5 +275,5 @@ fieldset {
 }
 
 .eventStyle:hover {
-	 transform: scale(1.2);
+	transform: scale(1.2);
 }

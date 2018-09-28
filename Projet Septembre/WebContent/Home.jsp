@@ -47,13 +47,12 @@
 </head>
 <body class="homeBody">
 	<jsp:include page="header.jsp"></jsp:include>
-	
-	<h2>Les derniers événements:</h2>
+
+	<h2 class='divTitle'>Les derniers événements:</h2>
 	<div class="eventList">
 
 
 		<%
-			
 			for (int i = 0; i < listeEvent.size(); i++) {
 				out.println("<div class='eventStyle'>");
 				out.println("</br>");
@@ -63,12 +62,11 @@
 				out.print("<p>");
 				out.print(listeEvent.get(i).getCategorie());
 				out.print("</p>");
-				out.print("<p>Le "+listeEvent.get(i).getDate()+" à ");
+				out.print("<p>Le " + listeEvent.get(i).getDate() + " à ");
 				out.print(listeEvent.get(i).getLieu());
 				out.print("</p>");
 				out.println("</div>");
 			}
-			
 		%>
 
 	</div>

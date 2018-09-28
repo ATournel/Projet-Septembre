@@ -22,9 +22,9 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 	
-	<h3>
-		Créer un Evenement: <a href="formulaireEvenement.jsp">Go!</a>
-	</h3>
+	<h2 class='divTitle'>
+		<a href="formulaireEvenement.jsp" class="voirPlus">Créer mon Evenement!</a>
+	</h2>
 	<br />
 	<br />
 	<div class="eventList">
@@ -65,6 +65,7 @@
 			String dateDebutEvenement;
 			String dateFinEvenement;
 
+			
 			while (result.next()) { // ne fonctionne qu'avec le while, solution à trouver !
 
 				int id_evenement = result.getInt("id_evenement");

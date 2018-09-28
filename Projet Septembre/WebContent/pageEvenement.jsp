@@ -56,9 +56,9 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 
-	<h3>
-		Créer mon Evenement: <a href="formulaireEvenement.jsp">Go!</a>
-	</h3>
+	<h2 class='divTitle'>
+		<a href="formulaireEvenement.jsp" class="voirPlus">Créer mon Evenement!</a>
+	</h2>
 	<br />
 	<br />
 	<div class="eventList">

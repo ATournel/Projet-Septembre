@@ -32,20 +32,6 @@ b {
 	display: inline-block
 }
 
-button {
-	border: none;
-	outline: 0;
-	display: inline-block;
-	padding: 8px;
-	color: white;
-	background-color: grey;
-	text-align: center;
-	cursor: pointer;
-	width: 430px;
-	font-size: 20px;
-	border-radius: 5px;
-}
-
 body {
 	background-image:
 		url("https://ak1.picdn.net/shutterstock/videos/21830161/thumb/1.jpg");
@@ -62,7 +48,6 @@ center {
 }
 
 #footer {
-	position: absolute;
 	bottom: 0;
 	width: 100%;
 }
@@ -74,51 +59,54 @@ center {
 <text-align= "center">
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<center>
-		<h1>Nous contacter</h1>
-		<form method="POST" action="MailDispatcherServlet">
-			<table>
-				<tr>
-					<td><p></p></td>
-				</tr>
-
-				<tr>
-					<label for="expediteur"><td align="left"><b>Email
-								expediteur :</b></td></label>
-					<td><input type="text" name="email" size="73"></td>
-				</tr>
-				<tr>
-					<td><p></p></td>
-				</tr>
-
-				<tr>
-					<label for="sujet"><td align="left"><b>Sujet :</b></td></label>
-					<td><input type="text" name="subject" size="73"></td>
-				</tr>
-				<tr>
-					<td><p></p></td>
-				</tr>
-				<tr>
-					<label for="message"><td align="left"><b>Message :</b></td></label>
-					<td><textarea name="message" cols="75" rows="6"
-							maxlength="1000"></textarea></td>
-				</tr>
-				<tr>
-					<td><p></p></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><input type="submit" value="Envoyer"></td>
+	<div class="contactUs">
+		<center>
+			<h1>Nous contacter</h1>
+			<form method="POST" action="MailDispatcherServlet">
+				<table>
 					<tr>
-					<td><p></p></td>
-			</tr>
-								</form>
+						<td><p></p></td>
+					</tr>
+
+					<tr>
+						<label for="expediteur"><td align="left"><b>Email
+									expediteur :</b></td></label>
+						<td><input type="text" name="email" size="73"></td>
+					</tr>
+					<tr>
+						<td><p></p></td>
+					</tr>
+
+					<tr>
+						<label for="sujet"><td align="left"><b>Sujet :</b></td></label>
+						<td><input type="text" name="subject" size="73"></td>
+					</tr>
+					<tr>
+						<td><p></p></td>
+					</tr>
+					<tr>
+						<label for="message"><td align="left"><b>Message
+									:</b></td></label>
+						<td><textarea name="message" cols="75" rows="6"
+								maxlength="1000"></textarea></td>
+					</tr>
+					<tr>
+						<td><p></p></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" value="Envoyer"></td>
+					<tr>
+						<td><p></p></td>
+					</tr>
+					</form>
 				</table display= "inline-block">
 			</form>
 		</center>
-		<div id="footer">
+	</div>
+	<div id="footer">
 		<jsp:include page="footer.html"></jsp:include>
-		</div>
-	</body>
+	</div>
+</body>
 </text-align>
 </html>

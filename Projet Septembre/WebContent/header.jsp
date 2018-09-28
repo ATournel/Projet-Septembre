@@ -22,7 +22,7 @@
 				<div class="bandeau">
 					<table>
 						<tr>
-							<td><h1>Vous cherchez un événement?</h1></td>
+							<td><h1><STRONG><em>VOUS CHERCHEZ UN EVENEMENT?</em></STRONG></h1></td>
 						</tr>
 						<tr>
 							<td><form action="pageEvenementSearch.jsp" name="searchBar">
@@ -50,12 +50,12 @@
 		</div>
 		<div class="row justify-content-md-center navBar">
 			<div class="col">
-				<a href="Home.jsp" id="accueil" class="bigLink">ACCUEIL</a>
+				<a href="Home.jsp" id="accueil" class="bigLink"><em>ACCUEIL</em></a>
 			</div>
 			<div class="col">
-				<a href="pageEvenement.jsp" class="bigLink">EVENEMENTS</a>
+				<a href="pageEvenement.jsp" class="bigLink"><em>EVENEMENTS</em></a>
 			</div>
-			<div class="col">${connect}</div>
+			<div class="col"><em>${connect}</em></div>
 		</div>
 	</div>
 </body>
