@@ -17,13 +17,13 @@
 	crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style/Style.css">
 </head>
-<body>
+<body class="eventPageBody">
 
 	<jsp:include page="header.jsp"></jsp:include>
 
 	
 	<h2 class='divTitle'>
-		<a href="formulaireEvenement.jsp" class="voirPlus">Créer mon Evenement!</a>
+		<a href="formulaireEvenement.jsp" class="voirPlus">CREER MON EVENEMENT!</a>
 	</h2>
 	<br />
 	<br />

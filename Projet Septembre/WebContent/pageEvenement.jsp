@@ -57,7 +57,7 @@
 
 
 	<h2 class='divTitle'>
-		<a href="formulaireEvenement.jsp" class="voirPlus">Créer mon Evenement!</a>
+		<a href="formulaireEvenement.jsp" class="voirPlus">CREER MON EVENEMENT!</a>
 	</h2>
 	<br />
 	<br />

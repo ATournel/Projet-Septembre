@@ -28,6 +28,10 @@ Font: Arial
 	padding: 0px;
 }
 
+.eventPageBody h2 {
+	text-align: center;
+}
+
 .homeBody {
 	background: url(horlogeVirtuelleMur.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -117,6 +121,8 @@ a:hover {
 	margin-left: 2%;
 	margin-bottom: 2%;
 	color: #000000;
+	text-decoration: underline;
+	font-weight: bold;
 }
 
 .voirPlus:hover {
@@ -124,6 +130,8 @@ a:hover {
 	margin-left: 2%;
 	margin-bottom: 2%;
 	color: #000000;
+	text-decoration: underline;
+	font-weight: bold;
 }
 
 .bigLink:hover {
