@@ -93,7 +93,7 @@ h2 {
 
 body {
 	background:
-		url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX25554818.jpg)
+		url(horlogeVirtuelleMur.jpg)
 		no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -104,8 +104,7 @@ body {
 }
 </style>
 </head>
-<body
-	background="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX25554818.jpg">
+<body class="profilBody">
 	<form action="profilePerso.jsp">
 		<jsp:include page="header.jsp"></jsp:include>
 		<h2 style="text-align: center">
@@ -114,19 +113,17 @@ body {
 
 		<div class="card">
 			<img
-				src="https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-wallpaper-new-PIC-WPC00923.jpg"
+				src="https://pbs.twimg.com/profile_images/2753097667/471b1b700c95affe5b8ee7cc37bd11b6.jpeg"
 				alt="ma photo" style="width: 100%">
 
 			<h2>
-				Nom:
 				<%
-				out.print(nom);
+				out.print("<h1>"+nom+" "+prenom+"</h1>");
 			%>
 			</h2>
 			<h2>
-				Prénom:
 				<%
-				out.print(prenom);
+				
 			%>
 			</h2>
 			<h2>
@@ -136,7 +133,7 @@ body {
 			%>
 			</h2>
 			<h2>
-				Mail compte:
+				Mail
 				<%
 				out.print(mail);
 			%>

@@ -48,7 +48,7 @@
 <body class="homeBody">
 	<jsp:include page="header.jsp"></jsp:include>
 
-	<h2 class='divTitle'>Les derniers événements:</h2>
+	<h2 class='divTitle'>LES DERNIERS EVENEMENTS:</h2>
 	<div class="eventList">
 
 

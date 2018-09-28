@@ -33,7 +33,7 @@ Font: Arial
 }
 
 .homeBody {
-	background: url(horlogeVirtuelleMur.jpg) no-repeat center center fixed;
+	background: url(notebook-stamp.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -63,7 +63,17 @@ Font: Arial
 }
 
 .createEventBody {
-	background: url(notebook-stamp.jpg) no-repeat center center fixed;
+	background: url(horlogeVirtuelleMur.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
+}
+
+.profilBody {
+	background: url(horlogeVirtuelleMur.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -263,6 +273,7 @@ fieldset {
 
 .divTitle {
 	color: #000000;
+	text-align: center;
 }
 
 .eventList {

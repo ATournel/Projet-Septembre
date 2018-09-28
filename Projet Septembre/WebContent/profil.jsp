@@ -48,7 +48,7 @@ a {
 
 		<div class="card">
 			<left><img
-				src="https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-wallpaper-new-PIC-WPC00923.jpg"
+				src="/Projet Septembre/WebContent/style/johnStarkGoogleGlass.jpg"
 				alt="ma photo" style="width: 100%"></left>
 			<h1>Nom:</h1>
 			<h1>Prénom:</h1>
